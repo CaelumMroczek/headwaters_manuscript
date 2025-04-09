@@ -53,42 +53,86 @@ date: last-modified
 ---
 
 ## Introduction
+
 ### Headwaters (importance to greater systems, regions of groundwater-surface water interaction)
+
 ### Arid landscapes (climate effects, under studied)
+
 ### Baseflow
 
 ## Data & Methods
-### Data 
+
+### Data
+
+#### Study Area
+
+-   USGS streamgages from the historical study period of 1950 – 2024 were filtered to include sites with \>90% data completeness. Any sites with data gaps \>3 continuous years were removed.
+
+-   Only sites with catchments fully within the borders of the US were used, due to data restrictions
+
+#### Headwater delineation
+
+-   Headwaters defined as Strahler Stream Order 1 + 2 (as found in multiple papers)
+
+-   To study headwater systems, we only used streamgages that fit our previous filters and were located on a stream order 1-3 stream
+
+    -   This allows us to analyze the *headwater systems*
+
+#### Climate Data
+
+-   [Livneh](https://psl.noaa.gov/data/gridded/data.livneh.html) for historical
+
+    -    monthly minimum and maximum temperature, and monthly mean precipitation
+
+        -   Can use to calculate \~ mean temp (max-min)
+
+-   LOCA version 2 for climate projections
+
+    -   monthly minimum and maximum temperature, and monthly mean precipitation
+
+        -   provided in the original dataset
+
+        -   1950-2100
+
+    -   [SSP](https://gmd.copernicus.org/articles/12/1443/2019/gmd-12-1443-2019.html) 245 & SSP 585
+
+        -   Represents the 'best-case' and 'worst-case' scenarios
+
 ### Base-flow Separation
+
 ### Trend & Correlation Analyses
 
 ## Results
+
 ### Historical Base-flow Analysis
+
 #### Spatial Variability of Baseflow (PCA/Classifications)
+
 #### Temporal Variability of Baseflow
+
 ##### Monthly
+
 ##### Annual
 
 ### Projected Base-flow Analysis
+
 #### Spatial Variability of Projected Baseflow
+
 #### Temporal Variability of Projected Baseflow
+
 ##### Monthly
+
 ##### Annual
 
 ## Discussion
 
-
 ## Conclusions
-
 
 ## Acknowledgments
 
-
 ## Open research
-
 
 ## References {.unnumbered}
 
-:::{#refs}
-
+::: {#refs}
 :::

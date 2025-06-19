@@ -54,11 +54,17 @@ date: last-modified
 
 ## Introduction
 
-### Headwaters (importance to greater systems, regions of groundwater-surface water interaction)
+#### Headwaters
 
-### Arid landscapes (climate effects, under studied)
+-   importance to greater systems, regions of groundwater-surface water interaction
 
-### Baseflow
+#### Arid landscapes
+
+-   climate effects, under studied
+
+#### Baseflow
+
+#### Objectives of paper
 
 ## Data & Methods
 
@@ -66,27 +72,46 @@ date: last-modified
 
 #### Study Area
 
--   USGS streamgages from the historical study period of 1950 – 2024 were filtered to include sites with \>90% data completeness. Any sites with data gaps \>3 continuous years were removed.
+-   USGS (streamgages from the historical study period of 1950 – 2024 were filtered to include sites with \>90% data completeness. Any sites with data gaps \>3 continuous years were removed.
 
--   Only sites with catchments fully within the borders of the US were used, due to data restrictions
+    -   Only sites with catchments fully within the borders of the US were used, due to data restrictions.
+
+    -   Removed any sites with a dam (as reported by NID data) along the mainstem of the river to remove the impact of management.
+
+These filters, along with the headwater filtering (as describen in Headwater delineation), lead to a study set of 118 headwater systems across all 11 western US states. To ensure that our study sites are representative of headwater systems across the western US, we compared their distribution to the full headwater network across the western US (using the same filters, just without streamgage filters). We compared these using 2 metrics, Köppen climate class coverage and USFS Watershed Condition. We started by reducing the delineation of Köppen climate classes by removing the third letter of the classification. This lead to 7 climate classifications with headwaters across the western US: <!--# _________ -->. All 7 of these classifications are represented by our study sites.
+
+The USFS uses a Watershed Condition Framework (WCF) to describe the ecohydrologic conditions of watersheds within forested lands. Nearly 90% (105/118) of our headwater catchments contain portions of national forest lands. This is consistent with findings that <!--# most of western water is found in forested lands -->, showing that we have a good representation in our study sites. The USFS WCF defines these forested lands in three classes: Functioning, Functioning at Risk, and Impaired Function <!--# USFS WCF -->. In the Western US, 49.1% of national forest land is considered at risk (Functioning at Risk or Impaired Function), which is matched by our study area where 48.5% of forests w/in headwaters catchments are at risk.
 
 #### Headwater delineation
 
--   Headwaters defined as Strahler Stream Order 1 + 2 (as found in multiple papers)
+-   Headwaters defined as Strahler Stream Order 1 + 2 (as found in multiple papers - Golden 2025, Freeman et al. 2007, Imberger et al. 2023)
+
+    -   Stream networks mapped over large spatial extents (such as NHDPlus) may miss localized headwater streams and, as such, are conservative estimates of headwater extents <!--# (Brinkerhof 2024) -->.
+    -   According to these definitions, we found that headwaters constitute 88.15% of western US rivers (by length).
 
 -   To study headwater systems, we only used streamgages that fit our previous filters and were located on a stream order 1-3 stream
 
-    -   This allows us to analyze the *headwater systems*
+    -   This allows us to analyze the *headwater systems* and to understand watershed processes effecting headwater baseflow
+
+-   Basins were delineated using NLDI (National Linked Data Index) -
+
+    -   mean basin area (km^2^) - 1499
+
+    -   median basin area - 543
+
+    -   somewhat high compared to what Golden 2025 suggested, but mostly due to some extremes and the fact that we are looking at headwater systems.
+
+By looking at headwater systems, we overcome some of the issues in scale when studying headwaters. As most national and global models are limited in the resolution of their analyses and studies of headwaters are also limited to catchments that have an adequate monitoring system for streamflow as well as climate variables (Golden, 2025). By using streamgages that capture the entire headwater system, and utilizing high-resolution climate data (PRISM - 800m) we overcome a difficulty of coarse resolution climate data in basins without instrumented weather stations.
 
 #### Climate Data
 
 -   [Livneh](https://psl.noaa.gov/data/gridded/data.livneh.html) for historical
 
-    -    monthly minimum and maximum temperature, and monthly mean precipitation
+    -    monthly minimum and maximum temperature, and monthly mean precipitation\$\$\$\$
 
-        -   Can use to calculate \~ mean temp (max-min)
+    -   
 
--   LOCA version 2 for climate projections
+-   WUS-D3 for climate projections
 
     -   monthly minimum and maximum temperature, and monthly mean precipitation
 
@@ -100,7 +125,31 @@ date: last-modified
 
 ### Base-flow Separation
 
+Directly measuring base flow (physical process) and base-flow index (BFI) (statistical metric) presents unique challenges (Eckhardt 2008). BFI must be derived using a base-flow separation technique, thus its value is inherently method-dependent and sensitive to the separation approach used (Beck et al. 2013). A number of techniques have been developed to estimate base flow, including tracer studies (Gonzales et al. 2009), graphical interpolation methods (Hydrology 1980; Sloto et al. 1996), and digital filters (Arnold et al. 1995; Eckhardt 2005; Nathan et al. 1990). The applicability of these methods vary depending on spatial scale, record length, and study objectives. Although the choice of separation method and parameterization introduces some subjectivity, these filters have been shown to yield reliable estimates when applied consistently within a study domain (Chapman 1999; Eckhardt 2005; Hydrology 1980; Ayers et al. 2022).
+
+In this study we used the Eckhardt (2005) digital filter using this equation:
+
+$$
+b_t = \frac{(1-BFI_{max}) \alpha b_{t-1} + (1+\alpha)BFI_{max} Q_t} {(1-\alpha BFI_{max})}
+$$
+
+where $b_t$ = filtered baseflow response at the $t$ time step; $BFI_{max}$ = the maximum possible BFI; $b_{t-1}$ = response at the $t-1$ time step; $Q_t$ = original streamflow at the $t$ time step; and α = recession constant. $\alpha$ was determined for each site by hydrograph recession analysis. $BFI_{max}$ was determined for each site using the backwards filter method proposed by Colischonn and Fann (2013) which allows for the generation of $BFI_{max}$ parameters for each site using $\alpha$, without field investigations of hydrogeological conditions. 
+
+The Eckhardt (2005) filter was found to have the best performance across the contiguous US and has been suggested as the preferred base-flow separation technique by Xie et al. (2020). 
+
 ### Trend & Correlation Analyses
+
+-   Mann-Kendall and Sen’s slope tests on:
+
+    -   Annual BFI and baseflow (**BFI for partitioning; baseflow for yield**)
+
+    -   Seasonal/monthly baseflow contribution (**baseflow**)
+
+-   Kendall’s tau
+
+    -   between climate variables and monthly baseflow (**baseflow**)
+
+    -   between climate variables and monthly BFI (**BFI**, for partitioning)
 
 ## Results
 

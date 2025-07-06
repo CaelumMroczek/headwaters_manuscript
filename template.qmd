@@ -72,15 +72,21 @@ date: last-modified
 
 #### Study Area
 
+Study timeframe
+
+-   The historical period of 1950-2024 was used as it provides ample historical data to remove the effects of long-term climate variability. For example, this time period covers 3 phases of the Pacific Decadal Oscillation (PDO).
+
+<!-- -->
+
 -   USGS (streamgages from the historical study period of 1950 – 2024 were filtered to include sites with \>90% data completeness. Any sites with data gaps \>3 continuous years were removed.
 
     -   Only sites with catchments fully within the borders of the US were used, due to data restrictions.
 
     -   Removed any sites with a dam (as reported by NID data) along the mainstem of the river to remove the impact of management.
 
-These filters, along with the headwater filtering (as describen in Headwater delineation), lead to a study set of 118 headwater systems across all 11 western US states. To ensure that our study sites are representative of headwater systems across the western US, we compared their distribution to the full headwater network across the western US (using the same filters, just without streamgage filters). We compared these using 2 metrics, Köppen climate class coverage and USFS Watershed Condition. We started by reducing the delineation of Köppen climate classes by removing the third letter of the classification. This lead to 7 climate classifications with headwaters across the western US: <!--# _________ -->. All 7 of these classifications are represented by our study sites.
+These filters, along with the headwater filtering (as described in Headwater delineation), lead to a study set of 118 headwater systems across all 11 western US states. To ensure that our study sites are representative of headwater systems across the western US, we compared their distribution to the full headwater network across the western US (using the same filters, just without streamgage filters). We compared these using 2 metrics, Köppen climate class coverage and USFS Watershed Condition. We started by reducing the delineation of Köppen climate classes by removing the third letter of the classification. This lead to 7 climate classifications with headwaters across the western US: <!--# _________ -->. All 7 of these classifications are represented by our study sites.
 
-The USFS uses a Watershed Condition Framework (WCF) to describe the ecohydrologic conditions of watersheds within forested lands. Nearly 90% (105/118) of our headwater catchments contain portions of national forest lands. This is consistent with findings that <!--# most of western water is found in forested lands -->, showing that we have a good representation in our study sites. The USFS WCF defines these forested lands in three classes: Functioning, Functioning at Risk, and Impaired Function <!--# USFS WCF -->. In the Western US, 49.1% of national forest land is considered at risk (Functioning at Risk or Impaired Function), which is matched by our study area where 48.5% of forests w/in headwaters catchments are at risk.
+The USFS uses a Watershed Condition Framework (WCF) to describe the ecohydrologic conditions of watersheds within forested lands. Approximately 90% (105/118) of our headwater catchments contain portions of national forest lands. This is consistent with findings that <!--# most of western water is found in forested lands -->, showing that we have a good representation in our study sites. The USFS WCF defines these forested lands in three classes: Functioning, Functioning at Risk, and Impaired Function <!--# USFS WCF -->. In the Western US, 49.1% of national forest land is considered at risk (Functioning at Risk or Impaired Function), which is matched by our study area where 48.5% of forests w/in headwaters catchments are at risk.
 
 #### Headwater delineation
 
@@ -133,9 +139,9 @@ $$
 b_t = \frac{(1-BFI_{max}) \alpha b_{t-1} + (1+\alpha)BFI_{max} Q_t} {(1-\alpha BFI_{max})}
 $$
 
-where $b_t$ = filtered baseflow response at the $t$ time step; $BFI_{max}$ = the maximum possible BFI; $b_{t-1}$ = response at the $t-1$ time step; $Q_t$ = original streamflow at the $t$ time step; and α = recession constant. $\alpha$ was determined for each site by hydrograph recession analysis. $BFI_{max}$ was determined for each site using the backwards filter method proposed by Colischonn and Fann (2013) which allows for the generation of $BFI_{max}$ parameters for each site using $\alpha$, without field investigations of hydrogeological conditions. 
+where $b_t$ = filtered baseflow response at the $t$ time step; $BFI_{max}$ = the maximum possible BFI; $b_{t-1}$ = response at the $t-1$ time step; $Q_t$ = original streamflow at the $t$ time step; and α = recession constant. $\alpha$ was determined for each site by hydrograph recession analysis. $BFI_{max}$ was determined for each site using the backwards filter method proposed by Colischonn and Fann (2013) which allows for the generation of $BFI_{max}$ parameters for each site using $\alpha$, without field investigations of hydrogeological conditions.
 
-The Eckhardt (2005) filter was found to have the best performance across the contiguous US and has been suggested as the preferred base-flow separation technique by Xie et al. (2020). 
+The Eckhardt (2005) filter was found to have the best performance across the contiguous US and has been suggested as the preferred base-flow separation technique by Xie et al. (2020).
 
 ### Trend & Correlation Analyses
 

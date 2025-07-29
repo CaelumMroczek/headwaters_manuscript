@@ -111,12 +111,6 @@ By looking at headwater systems, we overcome some of the issues in scale when st
 
 #### Climate Data
 
--   [Livneh](https://psl.noaa.gov/data/gridded/data.livneh.html) for historical
-
-    -    monthly minimum and maximum temperature, and monthly mean precipitation\$\$\$\$
-
-    -   
-
 -   WUS-D3 for climate projections
 
     -   monthly minimum and maximum temperature, and monthly mean precipitation
@@ -156,6 +150,12 @@ The Eckhardt (2005) filter was found to have the best performance across the con
     -   between climate variables and monthly baseflow (**baseflow**)
 
     -   between climate variables and monthly BFI (**BFI**, for partitioning)
+
+## LSTM Neural Network Modeling
+
+### Model Framework 
+
+### Training, Testing, and Validation
 
 ## Results
 

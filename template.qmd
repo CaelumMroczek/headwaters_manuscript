@@ -155,7 +155,7 @@ Cluster 4 (Arid/Monsoon or Ephemeral Basins) occurs at the lowest elevations wit
 
 Across all clusters, precipitation peaks in December, contributing roughly 15–18% of the annual total, and remains elevated through February (@fig-bf-precip-contrib). Snowmelt-dominated clusters (1 and 3) exhibit the largest variability in late-spring base flow, whereas Cluster 4 shows the strongest temperature-driven suppression of base flow in the dry season. These distinct seasonal signatures and sensitivities highlight the potential for divergent base-flow responses to future climate change across hydroclimatic regimes.
 
-![Monthly distribution of baseflow and precipitation as a percentage of the annual total, stratified by hydroclimatic cluster. Baseflow boxes are colored by cluster (Cluster 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue), while precipitation is shown in gray.](figs/cluster-bf_precip_contrib.png){#fig-bf-precip-contrib}
+![Monthly distribution of baseflow and precipitation as a percentage of the annual total, stratified by hydroclimatic cluster. Baseflow boxes are colored by cluster (Cluster 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue), while precipitation is shown in gray.](figs/cluster-bf_precip_contrib_legends.png){#fig-bf-precip-contrib}
 
 ### Historical Base-flow Analysis
 
@@ -193,7 +193,7 @@ Together, these results highlight that while antecedent moisture is a dominant c
 
 #### Base-Flow Trends and Seasonality
 
-Across the four hydroclimatic clusters, long-term base-flow trends varied in both magnitude and seasonal timing [@tbl-bf-trend_cluster]. The largest decreases in these groups occurred in early summer, particularly June and July, consistent with reduced snowmelt contributions. Modest increases were observed in midwinter months such as January and March in Cluster 1, and April in Cluster 3, though these gains were outweighed by summer declines. Clusters 1, 3, and 4 generally showed small to moderate changes, with a mix of positive and negative trends. In contrast, Cluster 2 exhibited large, widespread negative trends across nearly all months, with the most severe decreases in February, June, and December, and a median annual decline exceeding 50% per decade. These pronounced decreases may reflect reduced snowpack and a shift in precipitation phase from snow to rain, increasing the frequency of rain-on-snow events and accelerating seasonal runoff (CITE - Musselman et al. 2018).
+Across the four hydroclimatic clusters, long-term base-flow trends (1950-2024) varied in both magnitude and seasonal timing [@tbl-bf-trend_cluster]. The largest decreases in these groups occurred in early summer, particularly June and July, consistent with reduced snowmelt contributions. Modest increases were observed in midwinter months such as January and March in Cluster 1, and April in Cluster 3, though these gains were outweighed by summer declines. Clusters 1, 3, and 4 generally showed small to moderate changes, with a mix of positive and negative trends. In contrast, Cluster 2 exhibited large, widespread negative trends across nearly all months, with the most severe decreases in February, June, and December, and a median annual decline exceeding 50% per decade. These pronounced decreases may reflect reduced snowpack and a shift in precipitation phase from snow to rain, increasing the frequency of rain-on-snow events and accelerating seasonal runoff (CITE - Musselman et al. 2018).
 
 | Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Annual Trend | Pct. Sig. Up | Pct. Sig. Down |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -204,7 +204,7 @@ Across the four hydroclimatic clusters, long-term base-flow trends varied in bot
 
 : Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, expressed as percent change per decade from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends. {#tbl-bf-trend_cluster}
 
-![Monthly base-flow trends across western U.S. headwater basins, colored by Theil–Sen slope and shaped by statistical significance. Upward- and downward-pointing triangles indicate significant increasing or decreasing trends (p \< 0.05), respectively, while circles denote non-significant trends. Colors correspond to slope magnitude and direction, with warmer tones indicating negative trends and cooler tones indicating positive trends.](figs/hist-trends_monthly_slope-colored-stroke.png){#fig-hist_trends_monthly}
+![Historic monthly base-flow trends across western U.S. headwater basins (1950-2024), colored by Theil–Sen slope and shaped by statistical significance. Upward- and downward-pointing triangles indicate significant increasing or decreasing trends (p \< 0.05), respectively, while circles denote non-significant trends. Colors correspond to slope magnitude and direction, with warmer tones indicating negative trends and cooler tones indicating positive trends.](figs/hist-trends_monthly_slope-colored-stroke.png){#fig-hist_trends_monthly}
 
 ### Projected Base-flow Analysis
 

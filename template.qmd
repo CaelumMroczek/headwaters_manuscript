@@ -4,6 +4,8 @@ format:
     agu-pdf:
         keep-tex: true
     agu-html: default
+    html:
+        embed-resources: true
 author:
   - name: Caelum Mroczek
     affiliations:
@@ -55,7 +57,6 @@ knitr::opts_chunk$set(
   fig.height = 8,
   dpi = 300)
 ```
-
 
 ## Introduction
 

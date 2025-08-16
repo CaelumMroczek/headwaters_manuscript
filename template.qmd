@@ -45,21 +45,31 @@ citation:
   container-title: Water Resources Research
 keep-tex: true
 date: last-modified
+resources:
+  - figs
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 12,
+  fig.height = 8,
+  dpi = 300)
+```
+
 
 ## Introduction
 
-### Importance of baseflow in headwater systems
+### Importance of base flow in headwater systems
 
-Headwater catchments provide a disproportionate share of streamflow in the western U.S. Baseflow sustains perennial flow and ecosystems, especially during drought. importance to greater systems, regions of groundwater-surface water interaction
+Headwater catchments provide a disproportionate share of streamflow in the western U.S. Base flow sustains perennial flow and ecosystems, especially during drought. importance to greater systems, regions of groundwater-surface water interaction
 
 ### Sensitivity to climate variability and change
 
-Baseflow responds to changes in precipitation, temperature, and snowpack. Anticipated shifts include altered seasonality and reduced dry-season flow.
+Base flow responds to changes in precipitation, temperature, and snowpack. Anticipated shifts include altered seasonality and reduced dry-season flow.
 
 ### Knowledge gap
 
-Limited understanding of baseflow seasonality and future response across temporal and spatial scales.
+Limited understanding of base flow seasonality and future response across temporal and spatial scales.
 
 ### Motivation
 
@@ -111,15 +121,19 @@ We used a linear mixed-effects modeling framework to quantify relationships betw
 
 #### Model Framework
 
+This model is designed to predict monthly stream base flow using both climate history and watershed characteristics. It combines two types of input data: (1) a sequence of monthly climate variables over the past two years, and (2) static basin attributes like latitude, elevation, and area.
+
+The climate sequence is passed through a Long Short-Term Memory (LSTM) layer, which learns patterns and memory from time series data. The output of this LSTM is combined with the static features and passed through two fully connected layers (also called dense layers) (CITE). Dropout layers are included to reduce overfitting. The final output is a single number: the predicted log-transformed base flow. The model is trained to minimize the difference between its predictions and observed log(base flow), using a loss function based on mean absolute error (MAE). This hybrid architecture allows the model to learn both temporal patterns and site-specific differences in hydrologic behavior.
+
 #### Model Training and Testing
 
 ## Results
 
 ### Hydroclimate Clustering
 
-The k-means clustering identified four distinct hydroclimatic groups among the 115 study basins, reflecting differences in elevation, relief, basin size, climate regime, and base-flow response characteristics. These clusters capture key gradients in snow influence, seasonal precipitation patterns, and base-flow variability across the western United States. Two clusters (1 and 3) are primarily high-elevation, snow-influenced headwaters but differ in their sensitivity to temperature and snowpack persistence. Cluster 2 contains the largest, mixed-regime basins with relatively stable base flow and Cluster 4 represents low-elevation, arid to monsoon-influenced basins with the lowest base flow and highest interannual variability. Descriptive statistics for each cluster, including key climate, physiographic, and base-flow metrics, are provided in Table \_\_\_\_, and the spatial distribution of clusters across the study area is shown in Figure \_\_\_\_ .
+The k-means clustering identified four distinct hydroclimatic groups among the 115 study basins, reflecting differences in elevation, relief, basin size, climate regime, and base-flow response characteristics. These clusters capture key gradients in snow influence, seasonal precipitation patterns, and base-flow variability across the western United States. Two clusters (1 and 3) are primarily high-elevation, snow-influenced headwaters but differ in their sensitivity to temperature and snowpack persistence. Cluster 2 contains the largest, mixed-regime basins with relatively stable base flow and Cluster 4 represents low-elevation, arid to monsoon-influenced basins with the lowest base flow and highest interannual variability. Descriptive statistics for each cluster, including key climate, physiographic, and base-flow metrics, are provided in @tbl-cluster-summary, and the spatial distribution of clusters across the study area is shown in @fig-cluster-map.
 
-FIG - map?
+![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
 
 | Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Mean Base Flow | Base Flow CV |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -128,7 +142,7 @@ FIG - map?
 | 3 | 50 | 1124.8 | 2330 | 1772 | 85.69 | 3.97 | 4357 | 1.30 |
 | 4 | 38 | 865.1 | 735 | 1263 | 141.28 | 11.06 | 8071 | 1.77 |
 
-: Summary of physical, climatic, and base-flow characteristics for each hydroclimatic cluster. Values represent mean conditions for basins within each cluster; base flow statistics are derived from the full 1950–2024 record.
+: Summary of physical, climatic, and base-flow characteristics for each hydroclimatic cluster. Values represent mean conditions for basins within each cluster; base flow statistics are derived from the full 1950–2024 record. {#tbl-cluster-summary}
 
 Cluster 1 (Snowmelt-Dominated Mountain Catchments) occupies steep, high-relief mountain terrain where winter precipitation is primarily stored as snowpack and released during a concentrated late-spring melt period. These basins are located across the study area in high-elevation mountains. Base flow peaks in June, approximately six months after the precipitation maximum, and inter-annual variability is high due to differences in snow accumulation and melt timing.
 
@@ -138,15 +152,15 @@ Cluster 3 (Snow-Responsive Headwaters) also peaks in June but differs from Clust
 
 Cluster 4 (Arid/Monsoon or Ephemeral Basins) occurs at the lowest elevations with minimal snow influence. Base flow peaks in March, only about three months after the precipitation maximum, reflecting rapid winter-to-spring runoff and limited storage. These basins are mostly located along the Pacific coast. Flows recede quickly, and summer base flow is minimal due to high evapotranspiration and low infiltration from monsoon rains.
 
-Across all clusters, precipitation peaks in December, contributing roughly 15–18% of the annual total, and remains elevated through February. Snowmelt-dominated clusters (1 and 3) exhibit the largest variability in late-spring base flow, whereas Cluster 4 shows the strongest temperature-driven suppression of base flow in the dry season. These distinct seasonal signatures and sensitivities highlight the potential for divergent base-flow responses to future climate change across hydroclimatic regimes.
+Across all clusters, precipitation peaks in December, contributing roughly 15–18% of the annual total, and remains elevated through February (@fig-bf-precip-contrib). Snowmelt-dominated clusters (1 and 3) exhibit the largest variability in late-spring base flow, whereas Cluster 4 shows the strongest temperature-driven suppression of base flow in the dry season. These distinct seasonal signatures and sensitivities highlight the potential for divergent base-flow responses to future climate change across hydroclimatic regimes.
 
-FIG - cluster bf/precip plot
+![Monthly distribution of baseflow and precipitation as a percentage of the annual total, stratified by hydroclimatic cluster. Baseflow boxes are colored by cluster (Cluster 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue), while precipitation is shown in gray.](figs/cluster-bf_precip_contrib.png){#fig-bf-precip-contrib}
 
 ### Historical Base-flow Analysis
 
 #### Climate-Base Flow Relationship
 
-When the mixed-effects model was analyzed across all sites (Table \_\_\_\_), it revealed that antecedent wetness was the most consistently positive and influential driver of base flow across the study region. This supports the role of cumulative recharge and basin memory in sustaining flows, particularly during dry-season months. In contrast, snow precipitation had a strong negative contemporaneous effect in all clusters, consistent with winter accumulation storing water in the snowpack and delaying its release to streams. Mean temperature showed an overall negative association with base flow, suggesting that warmer conditions correspond to seasonal drying, likely through enhanced evapotranspiration or reduced soil moisture. Monthly precipitation had a generally weak to negative effect, with the strongest suppression in arid or monsoon-influenced basins.
+When the mixed-effects model was analyzed across all sites [@tbl-mixed-effect_all-site], it revealed that antecedent wetness was the most consistently positive and influential driver of base flow across the study region. This supports the role of cumulative recharge and basin memory in sustaining flows, particularly during dry-season months. In contrast, snow precipitation had a strong negative contemporaneous effect in all clusters, consistent with winter accumulation storing water in the snowpack and delaying its release to streams. Mean temperature showed an overall negative association with base flow, suggesting that warmer conditions correspond to seasonal drying, likely through enhanced evapotranspiration or reduced soil moisture. Monthly precipitation had a generally weak to negative effect, with the strongest suppression in arid or monsoon-influenced basins.
 
 |      Predictor      | Estimate | Std. Error | t-value | Significance Code |
 |:-------------------:|:--------:|:----------:|:-------:|:-----------------:|
@@ -158,9 +172,9 @@ When the mixed-effects model was analyzed across all sites (Table \_\_\_\_), it 
 |       Relief        |  1.059   |   0.225    |  4.70   |      \*\*\*       |
 |        Area         |  -0.012  |   0.223    |  -0.06  |        ns         |
 
-: Mixed-effects model results for climate and static predictors of monthly base flow across all study basins. Estimates represent fixed effects on log-transformed base flow, with positive coefficients indicating a positive association and negative coefficients indicating a negative association. Significance codes: \*\*\* p \< 0.001; \*\* p \< 0.01; \* p \< 0.05; ns = not significant.
+: Mixed-effects model results for climate and static predictors of monthly base flow across all study basins. Estimates represent fixed effects on log-transformed base flow, with positive coefficients indicating a positive association and negative coefficients indicating a negative association. Significance codes: \*\*\* p \< 0.001; \*\* p \< 0.01; \* p \< 0.05; ns = not significant. {#tbl-mixed-effect_all-site}
 
-When the model was stratified by hydroclimatic cluster (Table \_\_\_), key differences in climate–base flow relationships emerged. Antecedent wetness remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the accumulation–melt transition period. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins enhance routing of meltwater into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
+When the model was stratified by hydroclimatic cluster [@tbl-mixed-effect_cluster], key differences in climate–base flow relationships emerged. Antecedent wetness remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the accumulation–melt transition period. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins enhance routing of meltwater into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
 
 |      Variable       | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
 |:-------------------:|:---------:|:---------:|:---------:|:---------:|
@@ -172,13 +186,13 @@ When the model was stratified by hydroclimatic cluster (Table \_\_\_), key diffe
 |       Relief        |   1.153   |   0.059   |   0.657   |  -0.168   |
 |        Area         |   0.219   |  -0.172   |   0.325   |  -0.480   |
 
-: Mixed-effects model coefficients for climate and static predictors of monthly base flow, stratified by hydroclimatic cluster. Coefficients represent fixed-effects on log-transformed base flow; positive values indicate a positive association and negative values indicate a negative association.
+: Mixed-effects model estimates for climate and static predictors of monthly base flow, stratified by hydroclimatic cluster. Estimates represent fixed-effects on log-transformed base flow; positive values indicate a positive association and negative values indicate a negative association. {#tbl-mixed-effect_cluster}
 
 Together, these results highlight that while antecedent moisture is a dominant control on base flow in all regimes, the influence of snow, temperature, and terrain varies systematically across hydroclimatic clusters. These distinctions underscore the value of classification-informed modeling for understanding and projecting base-flow responses to climate variability and change.
 
 #### Base-Flow Trends and Seasonality
 
-Across the four hydroclimatic clusters, long-term base-flow trends varied in both magnitude and seasonal timing (Table \_\_ ). Clusters 1, 3, and 4 generally showed small to moderate changes, with a mix of positive and negative trends. In contrast, Cluster 2 exhibited large, widespread negative trends across nearly all months, with median annual declines exceeding 50% per decade. These pronounced decreases may reflect reduced snowpack and a shift in precipitation phase from snow to rain, increasing the frequency of rain-on-snow events and accelerating seasonal runoff (CITE - Musselman et al. 2018)).
+Across the four hydroclimatic clusters, long-term base-flow trends varied in both magnitude and seasonal timing [@tbl-bf-trend_cluster]. The largest decreases in these groups occurred in early summer, particularly June and July, consistent with reduced snowmelt contributions. Modest increases were observed in midwinter months such as January and March in Cluster 1, and April in Cluster 3, though these gains were outweighed by summer declines. Clusters 1, 3, and 4 generally showed small to moderate changes, with a mix of positive and negative trends. In contrast, Cluster 2 exhibited large, widespread negative trends across nearly all months, with the most severe decreases in February, June, and December, and a median annual decline exceeding 50% per decade. These pronounced decreases may reflect reduced snowpack and a shift in precipitation phase from snow to rain, increasing the frequency of rain-on-snow events and accelerating seasonal runoff (CITE - Musselman et al. 2018).
 
 | Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Annual Trend | Pct. Sig. Up | Pct. Sig. Down |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -187,7 +201,9 @@ Across the four hydroclimatic clusters, long-term base-flow trends varied in bot
 | 3 | -0.18 | -0.23 | 0.14 | 0.73 | 0.01 | -6.38 | -4.08 | -2.12 | -0.76 | -0.22 | -0.37 | -0.59 | -0.41 | 44.00 | 44.00 |
 | 4 | -0.04 | -9.92 | 0.04 | 0.00 | 0.00 | -0.02 | -0.10 | -0.88 | -1.02 | -1.30 | 0.00 | -6.59 | -3.58 | 31.58 | 63.16 |
 
-: Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, expressed as percent change per decade from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends.
+: Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, expressed as percent change per decade from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends. {#tbl-bf-trend_cluster}
+
+![Monthly base-flow trends across western U.S. headwater basins, colored by Theil–Sen slope and shaped by statistical significance. Upward- and downward-pointing triangles indicate significant increasing or decreasing trends (p \< 0.05), respectively, while circles denote non-significant trends. Colors correspond to slope magnitude and direction, with warmer tones indicating negative trends and cooler tones indicating positive trends.](figs/hist-trends_monthly_slope-colored-stroke.png){#fig-hist_trends_monthly}
 
 ### Projected Base-flow Analysis
 

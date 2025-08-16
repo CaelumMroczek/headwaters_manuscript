@@ -6,6 +6,7 @@ format:
     agu-html: default
     html:
         embed-resources: true
+    docx: default
 author:
   - name: Caelum Mroczek
     affiliations:

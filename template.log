@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.27)  15 AUG 2025 18:25
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.27)  16 AUG 2025 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,7 +373,6 @@ Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
 \FNH@width=\dimen177
 \FNH@toks=\toks27
 )
-\pandoc@box=\box64
 \cslhangindent=\skip82
 \csllabelwidth=\skip83
 (./trackchanges.sty
@@ -438,9 +437,9 @@ Package caption Info: rotating package is loaded.
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count320
 \float@exts=\toks33
-\float@box=\box65
+\float@box=\box64
 \@float@everytoks=\toks34
-\@floatcapt=\box66
+\@floatcapt=\box65
 )
 \@float@every@codelisting=\toks35
 \c@codelisting=\count321
@@ -530,7 +529,7 @@ File: hxetex.def 2022-02-21 v7.00n Hyperref driver for XeTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box67
+\pdfm@box=\box66
 \c@Hy@AnnotLevel=\count332
 \HyField@AnnotCount=\count333
 \Fld@listcount=\count334
@@ -556,30 +555,30 @@ File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 189.
+Package hyperref Info: Option `colorlinks' set `true' on input line 190.
 No file template.aux.
 \openout1 = `template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
 \c@maskedRefs=\count337
 (/usr/local/texlive/2022/texmf-dist/tex/latex/apacite/english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
@@ -587,19 +586,19 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 196.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 196.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 196.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 196.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 196.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 196.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 197.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 196.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 197.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -628,7 +627,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 196.
+(Font)              scaled to size 10.0pt on input line 197.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -667,18 +666,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 196.
+(Font)              scaled to size 10.0pt on input line 197.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 196.
+(Font)              `operators' in the math version `normal' on input line 197.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 196.
+ line 197.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 196.
+(Font)              `operators' in the math version `bold' on input line 197.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 196.
+t line 197.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -765,15 +764,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 196.
+(Font)              `symbols' in the math version `normal' on input line 197.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 196.
+t line 197.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 196.
+(Font)              `symbols' in the math version `bold' on input line 197.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 196.
+t line 197.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -843,21 +842,21 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-96.
+97.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 196.
+t line 197.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 196
+(Font)              `largesymbols' in the math version `bold' on input line 197
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 196.
-LaTeX Info: Redefining \microtypecontext on input line 196.
-Package microtype Info: Applying patch `item' on input line 196.
-Package microtype Info: Applying patch `toc' on input line 196.
-Package microtype Info: Applying patch `eqnum' on input line 196.
-Package microtype Info: Applying patch `footnote' on input line 196.
+t line 197.
+LaTeX Info: Redefining \microtypecontext on input line 197.
+Package microtype Info: Applying patch `item' on input line 197.
+Package microtype Info: Applying patch `toc' on input line 197.
+Package microtype Info: Applying patch `eqnum' on input line 197.
+Package microtype Info: Applying patch `footnote' on input line 197.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -876,7 +875,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-Package hyperref Info: Link coloring ON on input line 196.
+Package hyperref Info: Link coloring ON on input line 197.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -888,41 +887,41 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count338
 )
-LaTeX Info: Redefining \ref on input line 196.
-LaTeX Info: Redefining \pageref on input line 196.
-LaTeX Info: Redefining \nameref on input line 196.
+LaTeX Info: Redefining \ref on input line 197.
+LaTeX Info: Redefining \pageref on input line 197.
+LaTeX Info: Redefining \nameref on input line 197.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 200.
+(Font)              scaled to size 7.0pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 200.
+(Font)              scaled to size 5.0pt on input line 201.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-00.
+01.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 200.
+(Font)              scaled to size 10.00092pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 200.
+(Font)              scaled to size 7.00064pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 200.
+(Font)              scaled to size 5.00046pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 200.
+(Font)              scaled to size 9.99893pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 200.
+(Font)              scaled to size 6.99925pt on input line 201.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 200.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 200
+(Font)              scaled to size 4.99947pt on input line 201.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 201
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 200
+LaTeX Font Info:    Trying to load font information for U+msb on input line 201
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -930,556 +929,556 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 202.
+(Font)              scaled to size 8.0pt on input line 203.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 202.
+(Font)              scaled to size 6.0pt on input line 203.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 202.
+(Font)              scaled to size 8.00073pt on input line 203.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 202.
+(Font)              scaled to size 6.00055pt on input line 203.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 202.
+(Font)              scaled to size 7.99915pt on input line 203.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 202.
+(Font)              scaled to size 5.99936pt on input line 203.
 
-Package hyperref Warning: Ignoring empty anchor on input line 204.
+Package hyperref Warning: Ignoring empty anchor on input line 205.
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 Headwater streams comprise approximately 88% of the stream netwo
 rk in the west- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 ern United States and serve as critical sources of the nation’s 
 water supply. In the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 11 western states, nearly 66% of the water originates on federal
  lands, with forested 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 lands alone providing over half of this contribution. These head
 waters yield dis- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 proportionately high volumes of water and are vital for sustaini
 ng downstream 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 ecosystems and communities. Yet many of these forests are alread
 y degraded or at 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 risk, underscoring the vulnerability of these systems. Headwater
  systems are espe- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 cially sensitive to drought and climate change, which alter stre
 am water balance, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 chemistry, and ecological function. As droughts intensify, strea
 ms increasingly rely 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 on groundwater to maintain flow, especially during low-flow peri
 ods when base flow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 can become the primary source of discharge. This dependence is e
 xpected to grow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 under future climate scenarios. Understanding long-term trends i
 n base flow and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 its drivers is essential for anticipating climate impacts and gu
 iding restoration and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 protection efforts. This study addresses these challenges by ana
 lyzing 75 years of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 streamflow records to quantify historical patterns and trends in
  base flow across 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 western U.S. headwaters. Using base-flow separation techniques, 
 the Mann-Kendall 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 trend test, and the Theil-Sen estimator, we identify regional sh
 ifts in base-flow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 magnitude, timing, and variability, and link these patterns to k
 ey climatic drivers 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 such as precipitation and temperature. Regional climate projecti
 ons (SSP2-4.5 and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 SSP5-8.5) are used to estimate future base-flow responses under 
 low- and high- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 emission scenarios. Our results will provide critical insight in
 to the past and future 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 of groundwater-supported flows in sensitive headwater systems. B
 y bridging the gap 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 between regional-scale hydrologic projections and fine-scale hea
 dwater dynamics, this 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--238
+Underfull \hbox (badness 10000) in paragraph at lines 208--239
 \TU/lmr/m/n/10 work aids efforts to monitor and manage headwater systems for lo
 ng-term ecosystem 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 250--254
 []\TU/lmr/m/n/10 Headwater catchments provide a disproportionate share of strea
 mflow in the western 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--253
+Underfull \hbox (badness 10000) in paragraph at lines 250--254
 \TU/lmr/m/n/10 U.S. Base flow sustains perennial flow and ecosystems, especiall
 y during drought. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
 []\TU/lmr/m/n/10 Base flow responds to changes in precipitation, temperature, a
 nd snowpack. Antici- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--265
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 []\TU/lmr/m/n/10 Limited understanding of base flow seasonality and future resp
 onse across temporal 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 []\TU/lmr/m/n/10 Combine trend analysis, climate sensitivity assessment, and ma
 chine learning projec- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--280
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 []\TU/lmr/m/n/10 Quantify seasonal and long-term changes in base flow across we
 stern headwa- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+Underfull \hbox (badness 10000) in paragraph at lines 283--285
 []\TU/lmr/m/n/10 Project future base-flow trajectories using LSTM models under 
 climate change 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 []\TU/lmr/m/n/10 Daily mean discharge data were obtained for 115 U.S. Geologica
 l Survey (USGS) 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 streamgages located across the eleven western United States (FIG
  - STUDY AREA). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 Streamflow records were downloaded from the USGS National Water 
 Information 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 System for the period 1950–2024 (CITE). Sites were selected to h
 ave > 90% daily 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 data completeness, with no gaps exceeding three consecutive year
 s, and to have 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 catchments located entirely within U.S. borders to avoid data re
 strictions. Sites with 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 a dam on the main stem, as reported in the National Inventory of
  Dams (CITE), 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 were excluded to reduce the influence of direct flow regulation.
  Drainage areas 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 ranged from 4 to 21,167 km², with a mean of 1,524 km² and a medi
 an of 558 km². 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 This period of record provides sufficient length to detect long-
 term trends and hydro- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 logic regime shifts and encompasses three phases of the Pacific 
 Decadal Oscillation 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--304
+Underfull \hbox (badness 10000) in paragraph at lines 291--305
 \TU/lmr/m/n/10 (CITE), reducing the likelihood that results are biased by decad
 al climate variabil- 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 []\TU/lmr/m/n/10 Headwaters have been operational defined as streams with Strah
 ler stream order 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 1 or 2 (CITE - Golden 2025, Freeman et al. 2007, Imberger et al.
  2023). Large- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 scale stream network datasets may underestimate the extent of lo
 calized headwater 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 reaches (Brinkerhof 2024), indicating that these delineated head
 water streams likely 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 represent a minimum bound on actual headwater extent. In this an
 alysis, stream- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 gages located on streams of order 1 to 3 were included to captur
 e cumulative pro- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 cesses in headwater systems. By focusing on headwater systems, w
 e overcome issues 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 of scale that arise from the coarse resolution of national and g
 lobal models and from 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--318
+Underfull \hbox (badness 10000) in paragraph at lines 308--319
 \TU/lmr/m/n/10 the limited availability of catchments with adequate monitoring 
 for both streamflow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 []\TU/lmr/m/n/10 Basin boundaries were delineated using the National Linked Dat
 a Index (CITE). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 Across the western United States, headwater streams, as defined 
 above, constitute 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 88.15% of total river length. To assess the representativeness o
 f study sites, their 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 distribution was compared to the full headwater network across t
 he western United 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 States using Köppen climate classifications and the U.S. Forest 
 Service Watershed 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 Condition Framework. All seven major (two-letter) Köppen climate
  classes present 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 in the region are represented in the study dataset. Approximatel
 y 90 percent of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 study basins contained U.S. Forest Service lands, consistent wit
 h findings that most 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 western water originates in forested areas (CITE). Across the re
 gion, 49.1 percent 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 of forested headwater catchments are considered at risk, defined
  as Functioning at 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--333
+Underfull \hbox (badness 10000) in paragraph at lines 320--334
 \TU/lmr/m/n/10 Risk or Impaired Function, the study basins represent this well 
 with 48.5 percent of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 []\TU/lmr/m/n/10 Climate data were obtained from the Western United States Dyna
 mically Down- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 scaled Dataset (WUS-D3) (CITE), a dynamically downscaled product
  specifically 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 developed for climate applications in the western United States.
  WUS-D3 uses the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 Community Earth System Model v2 (CESM2) global climate model, do
 wnscaled 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 with the Weather Research and Forecasting (WRF) model to a spati
 al resolution 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 of approximately 9 km (CITE). CESM2 was selected because it is t
 he only GCM 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 within the WUS-D3 archive that provides simulations for both the
  SSP2-4.5 and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 SSP5-8.5 scenarios, allowing direct comparison of both moderate-
  and high-emissions 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 futures within the modeling framework. The dataset includes a hi
 storical period 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 from 1980 to 2014 and extends through 2099 for future projection
 s. Variables used 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 in this study included daily precipitation, daily mean temperatu
 re, daily minimum 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 temperature, and daily maximum temperature. Snow precipitation w
 as calculated 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 by summing daily precipitation on days when maximum temperature 
 was below 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 0 °C. Antecedent moisture was calculated as the cumulative preci
 pitation over the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 previous three months, following the approach of Ayers et al. (2
 022), and serves as a 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 proxy for short-term water storage within the basin. Monthly, ar
 ea-weighted climate 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--355
+Underfull \hbox (badness 10000) in paragraph at lines 335--356
 \TU/lmr/m/n/10 summaries were calculated for each basin to align with the tempo
 ral resolution of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 []\TU/lmr/m/n/10 Directly estimating base flow from streamflow records presents
  unique challenges 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 because it cannot be measured directly at the gauge and must be 
 inferred from the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 total hydrograph (Eckhardt, 2008). Numerous approaches have been
  developed for 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 separating base flow from total streamflow, including tracer stu
 dies (Gonzales et al., 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 2009), graphical interpolation methods (Hydrology, 1980; Sloto e
 t al., 1996), and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 digital filtering techniques (Arnold et al., 1995; Eckhardt, 200
 5; Nathan et al., 1990). 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 The suitability of these approaches depends on factors such as s
 patial scale, record 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 length, and study objectives. While the choice of method and par
 ameterization can 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 introduce some subjectivity, prior work has shown that digital f
 ilters can provide 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--371
+Underfull \hbox (badness 10000) in paragraph at lines 359--372
 \TU/lmr/m/n/10 reliable and repeatable estimates when applied consistently with
 in a study domain 
  []
@@ -1488,417 +1487,417 @@ in a study domain
 Underfull \vbox (badness 2221) has occurred while \output is active []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 []\TU/lmr/m/n/10 In this study we used the Eckhardt (2005) digital filter to es
 timate base flow from 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 []\TU/lmr/m/n/10 where $[][]$ is the filtered base-flow response at time step $
 []$, $[][]$ is the observed stream- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 flow at time step $[]$, $[][]$ is the base-flow response at the 
 previous time step, $[]$ is 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 the recession constant, and $[][][][]$ is the maximum possible b
 ase-flow index for 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 the catchment. The recession constant $[]$ was estimated for eac
 h site through hydro- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 graph recession analysis. $[][][][]$ was determined for each sit
 e using the backwards 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 filter method proposed by Colischonn and Fann (2013), which allo
 ws $[][][][]$ to 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 be estimated from $[]$ without requiring site-specific hydrogeol
 ogic field data. The 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 Eckhardt filter was selected because it has shown strong perform
 ance in diverse hy- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--392
+Underfull \hbox (badness 10000) in paragraph at lines 380--393
 \TU/lmr/m/n/10 drologic settings across the contiguous United States and has be
 en recommended as 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 []\TU/lmr/m/n/10 To classify study basins into groups with similar hydroclimati
 c regimes, we applied 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 k-means clustering to basin-averaged climate and hydrologic vari
 ables. Clustering 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 was conducted on long-term mean values of base flow magnitude an
 d variability, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 precipitation, snow-derived precipitation, mean temperature, ant
 ecedent wetness, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 and static physiographic attributes including drainage area, rel
 ief, and elevation. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 Variables were standardized (z-scores) prior to clustering to en
 sure equal weighting 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 across metrics with different units and magnitudes. The optimal 
 number of clusters 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 was selected based on a combination of the elbow method and inte
 rpretability of 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 known hydrologic regimes in the western United States. K-means w
 as chosen be- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 cause it provides a transparent, reproducible, and computational
 ly efficient method 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 for partitioning basins into internally cohesive and externally 
 distinct groups. This 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 approach is well suited for large-sample hydrology applications 
 where hydroclimatic 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 gradients are continuous rather than categorical (CITE). The res
 ulting clusters were 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 used to stratify subsequent statistical and machine learning ana
 lyses, allowing for 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--414
+Underfull \hbox (badness 10000) in paragraph at lines 396--415
 \TU/lmr/m/n/10 the identification of climate–base flow relationships and projec
 ted changes within 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 []\TU/lmr/m/n/10 We used the Mann-Kendall (MK) trend test to determine the pres
 ence of trends in 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 the base-flow data at a monthly time-step (CITE). The MK test is
  a nonparametric 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 test that detects monotonic trends in non-normally distributed d
 ata. The MK test is 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 widely used in hydrologic studies (CITE), and was used here to e
 stablish statistically 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 significant trends ($[]$ < 0.05). Autocorrelation was present in
  many of the streamflow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 records used here, as such we employed the modified MK test prop
 osed by Hamed 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 and Rao (1998). The trend magnitude was estimated using the Thie
 l-Sen slope, a 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--428
+Underfull \hbox (badness 10000) in paragraph at lines 418--429
 \TU/lmr/m/n/10 non-parametric technique widely used in hydrologic studies (CITE
 ). All calculations 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 []\TU/lmr/m/n/10 We used a linear mixed-effects modeling framework to quantify 
 relationships be- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 tween monthly baseflow and climate variables. while accounting f
 or the hierarchical 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 structure of the data, where repeated observations are nested wi
 thin individual 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 basins. All models were fit using log-transformed monthly base f
 low as the response 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 variable to reduce skewness, stabilize variance, and improve mod
 el performance. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 This approach was selected because it accommodates both fixed ef
 fects, representing 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 regional-scale climate drivers, and random effects, capturing si
 te-specific variability 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 that is not explained by the fixed predictors. To address strong
  multicollinearity 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 among the temperature variables (mean, minimum, and maximum dail
 y tempera- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 ture), we retained only mean temperature (t2) in the mixed-effec
 ts model to ensure 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 interpretability of parameter estimates. This constraint was app
 lied only in the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 mixed-effects framework; the LSTM modeling framework retained al
 l three temper- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--447
 \TU/lmr/m/n/10 ature variables, as deep learning approaches do not require inde
 pendence among 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--457
+Underfull \hbox (badness 10000) in paragraph at lines 453--458
 []\TU/lmr/m/n/10 This model is designed to predict monthly stream base flow usi
 ng both climate 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--457
+Underfull \hbox (badness 10000) in paragraph at lines 453--458
 \TU/lmr/m/n/10 history and watershed characteristics. It combines two types of 
 input data: (1) a 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--457
+Underfull \hbox (badness 10000) in paragraph at lines 453--458
 \TU/lmr/m/n/10 sequence of monthly climate variables over the past two years, a
 nd (2) static basin 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 []\TU/lmr/m/n/10 The climate sequence is passed through a Long Short-Term Memor
 y (LSTM) layer, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 which learns patterns and memory from time series data. The outp
 ut of this LSTM 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 is combined with the static features and passed through two full
 y connected layers 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 (also called dense layers) (CITE). Dropout layers are included t
 o reduce overfitting. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 The final output is a single number: the predicted log-transform
 ed base flow. The 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 model is trained to minimize the difference between its predicti
 ons and observed 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 log(base flow), using a loss function based on mean absolute err
 or (MAE). This hy- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--468
+Underfull \hbox (badness 10000) in paragraph at lines 459--469
 \TU/lmr/m/n/10 brid architecture allows the model to learn both temporal patter
 ns and site-specific 
  []
 
 
 LaTeX Warning: Reference `tbl-cluster-summary' on page 5 undefined on input lin
-e 488.
+e 489.
 
 
 LaTeX Warning: Reference `fig-cluster-map' on page 5 undefined on input line 49
-0.
+1.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 []\TU/lmr/m/n/10 The k-means clustering identified four distinct hydroclimatic 
 groups among the 115 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 study basins, reflecting differences in elevation, relief, basin
  size, climate regime, and 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 base-flow response characteristics. These clusters capture key g
 radients in snow in- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 fluence, seasonal precipitation patterns, and base-flow variabil
 ity across the western 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 United States. Two clusters (1 and 3) are primarily high-elevati
 on, snow-influenced 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 headwaters but differ in their sensitivity to temperature and sn
 owpack persistence. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 Cluster 2 contains the largest, mixed-regime basins with relativ
 ely stable base flow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 and Cluster 4 represents low-elevation, arid to monsoon-influenc
 ed basins with the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 lowest base flow and highest interannual variability. Descriptiv
 e statistics for each 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 cluster, including key climate, physiographic, and base-flow met
 rics, are provided in 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--491
+Underfull \hbox (badness 10000) in paragraph at lines 477--492
 \TU/lmr/m/n/10 Table [], and the spatial distribution of clusters across the st
 udy area is shown in 
  []
@@ -1906,217 +1905,217 @@ udy area is shown in
 File: figs/cluster_map.png Graphic file (type bmp)
 <figs/cluster_map.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
+Underfull \hbox (badness 10000) in paragraph at lines 505--505
 []\TU/lmr/m/n/10 Figure  1: |[][]Spatial distribution of study streamgages acro
 ss the western United States,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
+Underfull \hbox (badness 10000) in paragraph at lines 505--505
 \TU/lmr/m/n/10 colored by hydroclimatic cluster. Clusters reflect differences i
 n elevation, snow influence,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
+Underfull \hbox (badness 10000) in paragraph at lines 505--505
 \TU/lmr/m/n/10 base-flow magnitude, and seasonality. Basins were grouped using 
 k-means clustering on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
+Underfull \hbox (badness 10000) in paragraph at lines 522--522
 []\TU/lmr/m/n/10 Table 1: |Summary of physical, climatic, and base-flow charact
 eristics for each hydrocli-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
+Underfull \hbox (badness 10000) in paragraph at lines 522--522
 \TU/lmr/m/n/10 matic cluster. Values represent mean conditions for basins withi
 n each cluster; base flow
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 575--582
 []\TU/lmr/m/n/10 Cluster 1 (Snowmelt-Dominated Mountain Catchments) occupies st
 eep, high-relief 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 575--582
 \TU/lmr/m/n/10 mountain terrain where winter precipitation is primarily stored 
 as snowpack and re- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 575--582
 \TU/lmr/m/n/10 leased during a concentrated late-spring melt period. These basi
 ns are located across 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 575--582
 \TU/lmr/m/n/10 the study area in high-elevation mountains. Base flow peaks in J
 une, approximately 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 575--582
 \TU/lmr/m/n/10 six months after the precipitation maximum, and inter-annual var
 iability is high due 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 []\TU/lmr/m/n/10 Cluster 2 (Mixed-Regime Large Catchments) represents moderate-
 elevation, high- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 \TU/lmr/m/n/10 relief basins with the largest drainage areas in the dataset. Mo
 st of these basins are 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 \TU/lmr/m/n/10 found along the Cascade Range in the north west of the study are
 a along CA, OR, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 \TU/lmr/m/n/10 and WA. Base flow peaks earlier, in May, about five months after
  the precipitation 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 \TU/lmr/m/n/10 maximum. Snowmelt remains important, but basin size and integrat
 ed flow paths 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--590
+Underfull \hbox (badness 10000) in paragraph at lines 583--591
 \TU/lmr/m/n/10 buffer short-term variability, resulting in lower inter-annual v
 ariability during peak 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 591--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--599
 []\TU/lmr/m/n/10 Cluster 3 (Snow-Responsive Headwaters) also peaks in June but 
 differs from Cluster 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--599
 \TU/lmr/m/n/10 1 in showing a stronger positive association between temperature
  and base flow, con- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--599
 \TU/lmr/m/n/10 sistent with more immediate snowmelt responses during warm perio
 ds. These basins 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--599
 \TU/lmr/m/n/10 are found throughout the Intermountain West where they may exper
 ience earlier 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--599
 \TU/lmr/m/n/10 onset of melt or mid-winter melt events, leading to sustained ba
 se flow through early 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 600--607
 []\TU/lmr/m/n/10 Cluster 4 (Arid/Monsoon or Ephemeral Basins) occurs at the low
 est elevations with 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 600--607
 \TU/lmr/m/n/10 minimal snow influence. Base flow peaks in March, only about thr
 ee months after 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 600--607
 \TU/lmr/m/n/10 the precipitation maximum, reflecting rapid winter-to-spring run
 off and limited stor- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 600--607
 \TU/lmr/m/n/10 age. These basins are mostly located along the Pacific coast. Fl
 ows recede quickly, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--606
+Underfull \hbox (badness 10000) in paragraph at lines 600--607
 \TU/lmr/m/n/10 and summer base flow is minimal due to high evapotranspiration a
 nd low infiltration 
  []
 
 
 LaTeX Warning: Reference `fig-bf-precip-contrib' on page 7 undefined on input l
-ine 609.
+ine 610.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 []\TU/lmr/m/n/10 Across all clusters, precipitation peaks in December, contribu
 ting roughly 15–18% 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 \TU/lmr/m/n/10 of the annual total, and remains elevated through February (Figu
 re []). Snowmelt- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 \TU/lmr/m/n/10 dominated clusters (1 and 3) exhibit the largest variability in 
 late-spring base flow, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 \TU/lmr/m/n/10 whereas Cluster 4 shows the strongest temperature-driven suppres
 sion of base flow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 \TU/lmr/m/n/10 in the dry season. These distinct seasonal signatures and sensit
 ivities highlight the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--616
+Underfull \hbox (badness 10000) in paragraph at lines 608--617
 \TU/lmr/m/n/10 potential for divergent base-flow responses to future climate ch
 ange across hydrocli- 
  []
 
-File: figs/cluster-bf_precip_contrib.png Graphic file (type bmp)
-<figs/cluster-bf_precip_contrib.png>
+File: figs/cluster-bf_precip_contrib_legends.png Graphic file (type bmp)
+<figs/cluster-bf_precip_contrib_legends.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--629
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 []\TU/lmr/m/n/10 Figure  2: |[]Monthly distribution of baseflow and precipitati
 on as a percentage of the an-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--629
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 \TU/lmr/m/n/10 nual total, stratified by hydroclimatic cluster. Baseflow boxes 
 are colored by cluster (Clus-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--629
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 \TU/lmr/m/n/10 ter 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue
 ), while precipitation is
  []
@@ -2124,200 +2123,200 @@ Underfull \hbox (badness 10000) in paragraph at lines 629--629
 [7]
 
 LaTeX Warning: Reference `tbl-mixed-effect_all-site' on page 8 undefined on inp
-ut line 640.
+ut line 641.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 []\TU/lmr/m/n/10 When the mixed-effects model was analyzed across all sites Tab
 le [], it revealed 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 that antecedent wetness was the most consistently positive and i
 nfluential driver 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 of base flow across the study region. This supports the role of 
 cumulative recharge 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 and basin memory in sustaining flows, particularly during dry-se
 ason months. In 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 contrast, snow precipitation had a strong negative contemporaneo
 us effect in all clus- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 ters, consistent with winter accumulation storing water in the s
 nowpack and delay- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 ing its release to streams. Mean temperature showed an overall n
 egative association 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 with base flow, suggesting that warmer conditions correspond to 
 seasonal drying, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 likely through enhanced evapotranspiration or reduced soil moist
 ure. Monthly pre- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--652
+Underfull \hbox (badness 10000) in paragraph at lines 640--653
 \TU/lmr/m/n/10 cipitation had a generally weak to negative effect, with the str
 ongest suppression in 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 []\TU/lmr/m/n/10 Table 2: |Mixed-effects model results for climate and static p
 redictors of monthly base flow
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 \TU/lmr/m/n/10 across all study basins. Estimates represent fixed effects on lo
 g-transformed base flow,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 \TU/lmr/m/n/10 with positive coefficients indicating a positive association and
  negative coefficients indicat-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 666--666
 \TU/lmr/m/n/10 ing a negative association. Significance codes: *** p < 0.001; *
 * p < 0.01; * p < 0.05; ns
  []
 
 
 LaTeX Warning: Reference `tbl-mixed-effect_cluster' on page 8 undefined on inpu
-t line 706.
+t line 707.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 []\TU/lmr/m/n/10 When the model was stratified by hydroclimatic cluster Table [
 ], key differences 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 in climate–base flow relationships emerged. Antecedent wetness r
 emained strongly 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 positive in all groups, with the largest effect in Cluster 4, in
 dicating its particular 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 importance in sustaining flows in water-limited environments. Sn
 ow suppression 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 of base flow was strongest in Cluster 1, reflecting the storage-
 dominated snowmelt 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 regime of steep mountain catchments. Temperature effects varied 
 markedly: Clus- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 ter 3, comprising snow-responsive headwaters, was the only group
  with a positive 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 temperature effect, consistent with warming-induced snowmelt boo
 sting base flow 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 during the accumulation–melt transition period. In contrast, Clu
 ster 4 exhibited a 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 strong negative temperature effect, suggesting enhanced evaporat
 ive losses or soil 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 moisture depletion during warm periods. Terrain metrics were als
 o important in 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 certain regimes; elevation and relief had the strongest positive
  effects in Cluster 1, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 indicating that steep, high-relief basins enhance routing of mel
 twater into groundwa- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 ter and streams. Basin area had limited influence in most cluste
 rs but was strongly 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--725
+Underfull \hbox (badness 10000) in paragraph at lines 706--726
 \TU/lmr/m/n/10 negative in Cluster 4, potentially reflecting inefficient runoff
  generation or storage 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--731
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
 []\TU/lmr/m/n/10 Table 3: |Mixed-effects model estimates for climate and static
  predictors of monthly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--731
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
 \TU/lmr/m/n/10 base flow, stratified by hydroclimatic cluster. Estimates repres
 ent fixed-effects on log-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--731
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
 \TU/lmr/m/n/10 transformed base flow; positive values indicate a positive assoc
 iation and negative values
  []
@@ -2325,633 +2324,633 @@ iation and negative values
 [8]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 3 on input line 749.
+(longtable)                in table 3 on input line 750.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--757
+Underfull \hbox (badness 10000) in paragraph at lines 752--758
 []\TU/lmr/m/n/10 Together, these results highlight that while antecedent moistu
 re is a dominant con- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--757
+Underfull \hbox (badness 10000) in paragraph at lines 752--758
 \TU/lmr/m/n/10 trol on base flow in all regimes, the influence of snow, tempera
 ture, and terrain 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--757
+Underfull \hbox (badness 10000) in paragraph at lines 752--758
 \TU/lmr/m/n/10 varies systematically across hydroclimatic clusters. These disti
 nctions underscore the 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--757
+Underfull \hbox (badness 10000) in paragraph at lines 752--758
 \TU/lmr/m/n/10 value of classification-informed modeling for understanding and 
 projecting base-flow 
  []
 
 
 LaTeX Warning: Reference `tbl-bf-trend_cluster' on page 9 undefined on input li
-ne 763.
+ne 764.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
 []\TU/lmr/m/n/10 Across the four hydroclimatic clusters, long-term base-flow tr
-ends varied in both 
+ends (1950-2024) varied 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 magnitude and seasonal timing Table []. The largest decreases in
- these groups 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 in both magnitude and seasonal timing Table []. The largest decr
+eases in these 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 occurred in early summer, particularly June and July, consistent
- with reduced 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 groups occurred in early summer, particularly June and July, con
+sistent with re- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 snowmelt contributions. Modest increases were observed in midwin
-ter months such 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 duced snowmelt contributions. Modest increases were observed in 
+midwinter months 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 as January and March in Cluster 1, and April in Cluster 3, thoug
-h these gains were 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 such as January and March in Cluster 1, and April in Cluster 3, 
+though these gains 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 outweighed by summer declines. Clusters 1, 3, and 4 generally sh
-owed small to mod- 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 were outweighed by summer declines. Clusters 1, 3, and 4 general
+ly showed small to 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
-\TU/lmr/m/n/10 erate changes, with a mix of positive and negative trends. In co
-ntrast, Cluster 2 
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
+\TU/lmr/m/n/10 moderate changes, with a mix of positive and negative trends. In
+ contrast, Cluster 2 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
 \TU/lmr/m/n/10 exhibited large, widespread negative trends across nearly all mo
 nths, with the most 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
 \TU/lmr/m/n/10 severe decreases in February, June, and December, and a median a
 nnual decline ex- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
 \TU/lmr/m/n/10 ceeding 50% per decade. These pronounced decreases may reflect r
 educed snowpack 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--776
+Underfull \hbox (badness 10000) in paragraph at lines 762--777
 \TU/lmr/m/n/10 and a shift in precipitation phase from snow to rain, increasing
  the frequency of rain- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []\TU/lmr/m/n/10 Table 4: |Median monthly base-flow trends by hydroclimatic clu
 ster for 1950–2024, ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \TU/lmr/m/n/10 pressed as percent change per decade from Theil–Sen slope estima
 tes. Positive values
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \TU/lmr/m/n/10 indicate increasing base flow; negative values indicate decreasi
 ng base flow. “Pct. Sig. Up”
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--800
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 \TU/lmr/m/n/10 and “Pct. Sig. Down” show the percentage of sites with statistic
 ally significant (p < 0.05)
  []
 
 
-Overfull \hbox (17.9572pt too wide) in paragraph at lines 803--804
+Overfull \hbox (17.9572pt too wide) in paragraph at lines 804--805
  []\TU/lmr/m/n/10 Cluster 
  []
 
 
-Overfull \hbox (1.8472pt too wide) in paragraph at lines 805--806
+Overfull \hbox (1.8472pt too wide) in paragraph at lines 806--807
  []\TU/lmr/m/n/10 Jan 
  []
 
 
-Overfull \hbox (2.1072pt too wide) in paragraph at lines 807--808
+Overfull \hbox (2.1072pt too wide) in paragraph at lines 808--809
  []\TU/lmr/m/n/10 Feb 
  []
 
 
-Overfull \hbox (4.2972pt too wide) in paragraph at lines 809--810
+Overfull \hbox (4.2972pt too wide) in paragraph at lines 810--811
  []\TU/lmr/m/n/10 Mar 
  []
 
 
-Overfull \hbox (2.80719pt too wide) in paragraph at lines 811--812
+Overfull \hbox (2.80719pt too wide) in paragraph at lines 812--813
  []\TU/lmr/m/n/10 Apr 
  []
 
 
-Overfull \hbox (5.2072pt too wide) in paragraph at lines 813--814
+Overfull \hbox (5.2072pt too wide) in paragraph at lines 814--815
  []\TU/lmr/m/n/10 May 
  []
 
 
-Overfull \hbox (2.4072pt too wide) in paragraph at lines 815--816
+Overfull \hbox (2.4072pt too wide) in paragraph at lines 816--817
  []\TU/lmr/m/n/10 Jun 
  []
 
 
-Overfull \hbox (3.80719pt too wide) in paragraph at lines 819--820
+Overfull \hbox (3.80719pt too wide) in paragraph at lines 820--821
  []\TU/lmr/m/n/10 Aug 
  []
 
 
-Overfull \hbox (1.9672pt too wide) in paragraph at lines 821--822
+Overfull \hbox (1.9672pt too wide) in paragraph at lines 822--823
  []\TU/lmr/m/n/10 Sep 
  []
 
 
-Overfull \hbox (2.2472pt too wide) in paragraph at lines 823--824
+Overfull \hbox (2.2472pt too wide) in paragraph at lines 824--825
  []\TU/lmr/m/n/10 Oct 
  []
 
 
-Overfull \hbox (3.6472pt too wide) in paragraph at lines 825--826
+Overfull \hbox (3.6472pt too wide) in paragraph at lines 826--827
  []\TU/lmr/m/n/10 Nov 
  []
 
 
-Overfull \hbox (2.9272pt too wide) in paragraph at lines 827--828
+Overfull \hbox (2.9272pt too wide) in paragraph at lines 828--829
  []\TU/lmr/m/n/10 Dec 
  []
 
 
-Overfull \hbox (18.91719pt too wide) in paragraph at lines 829--830
+Overfull \hbox (18.91719pt too wide) in paragraph at lines 830--831
  []\TU/lmr/m/n/10 Median 
  []
 
 
-Overfull \hbox (0.7472pt too wide) in paragraph at lines 829--830
+Overfull \hbox (0.7472pt too wide) in paragraph at lines 830--831
  \TU/lmr/m/n/10 An- 
  []
 
 
-Overfull \hbox (5.02719pt too wide) in paragraph at lines 829--830
+Overfull \hbox (5.02719pt too wide) in paragraph at lines 830--831
  \TU/lmr/m/n/10 nual 
  []
 
 
-Overfull \hbox (11.91719pt too wide) in paragraph at lines 829--830
+Overfull \hbox (11.91719pt too wide) in paragraph at lines 830--831
  \TU/lmr/m/n/10 Trend 
  []
 
 
-Overfull \hbox (2.3772pt too wide) in paragraph at lines 831--832
+Overfull \hbox (2.3772pt too wide) in paragraph at lines 832--833
  []\TU/lmr/m/n/10 Pct. 
  []
 
 
-Overfull \hbox (0.5772pt too wide) in paragraph at lines 831--832
+Overfull \hbox (0.5772pt too wide) in paragraph at lines 832--833
  \TU/lmr/m/n/10 Sig. 
  []
 
 
-Overfull \hbox (2.3772pt too wide) in paragraph at lines 833--834
+Overfull \hbox (2.3772pt too wide) in paragraph at lines 834--835
  []\TU/lmr/m/n/10 Pct. 
  []
 
 
-Overfull \hbox (0.5772pt too wide) in paragraph at lines 833--834
+Overfull \hbox (0.5772pt too wide) in paragraph at lines 834--835
  \TU/lmr/m/n/10 Sig. 
  []
 
 
-Overfull \hbox (11.5472pt too wide) in paragraph at lines 833--834
+Overfull \hbox (11.5472pt too wide) in paragraph at lines 834--835
  \TU/lmr/m/n/10 Down 
  []
 
 
-Overfull \hbox (17.9572pt too wide) in paragraph at lines 839--840
+Overfull \hbox (17.9572pt too wide) in paragraph at lines 840--841
  []\TU/lmr/m/n/10 Cluster 
  []
 
 
-Overfull \hbox (1.8472pt too wide) in paragraph at lines 841--842
+Overfull \hbox (1.8472pt too wide) in paragraph at lines 842--843
  []\TU/lmr/m/n/10 Jan 
  []
 
 
-Overfull \hbox (2.1072pt too wide) in paragraph at lines 843--844
+Overfull \hbox (2.1072pt too wide) in paragraph at lines 844--845
  []\TU/lmr/m/n/10 Feb 
  []
 
 
-Overfull \hbox (4.2972pt too wide) in paragraph at lines 845--846
+Overfull \hbox (4.2972pt too wide) in paragraph at lines 846--847
  []\TU/lmr/m/n/10 Mar 
  []
 
 
-Overfull \hbox (2.80719pt too wide) in paragraph at lines 847--848
+Overfull \hbox (2.80719pt too wide) in paragraph at lines 848--849
  []\TU/lmr/m/n/10 Apr 
  []
 
 
-Overfull \hbox (5.2072pt too wide) in paragraph at lines 849--850
+Overfull \hbox (5.2072pt too wide) in paragraph at lines 850--851
  []\TU/lmr/m/n/10 May 
  []
 
 
-Overfull \hbox (2.4072pt too wide) in paragraph at lines 851--852
+Overfull \hbox (2.4072pt too wide) in paragraph at lines 852--853
  []\TU/lmr/m/n/10 Jun 
  []
 
 
-Overfull \hbox (3.80719pt too wide) in paragraph at lines 855--856
+Overfull \hbox (3.80719pt too wide) in paragraph at lines 856--857
  []\TU/lmr/m/n/10 Aug 
  []
 
 
-Overfull \hbox (1.9672pt too wide) in paragraph at lines 857--858
+Overfull \hbox (1.9672pt too wide) in paragraph at lines 858--859
  []\TU/lmr/m/n/10 Sep 
  []
 
 
-Overfull \hbox (2.2472pt too wide) in paragraph at lines 859--860
+Overfull \hbox (2.2472pt too wide) in paragraph at lines 860--861
  []\TU/lmr/m/n/10 Oct 
  []
 
 
-Overfull \hbox (3.6472pt too wide) in paragraph at lines 861--862
+Overfull \hbox (3.6472pt too wide) in paragraph at lines 862--863
  []\TU/lmr/m/n/10 Nov 
  []
 
 
-Overfull \hbox (2.9272pt too wide) in paragraph at lines 863--864
+Overfull \hbox (2.9272pt too wide) in paragraph at lines 864--865
  []\TU/lmr/m/n/10 Dec 
  []
 
 
-Overfull \hbox (18.91719pt too wide) in paragraph at lines 865--866
+Overfull \hbox (18.91719pt too wide) in paragraph at lines 866--867
  []\TU/lmr/m/n/10 Median 
  []
 
 
-Overfull \hbox (0.7472pt too wide) in paragraph at lines 865--866
+Overfull \hbox (0.7472pt too wide) in paragraph at lines 866--867
  \TU/lmr/m/n/10 An- 
  []
 
 
-Overfull \hbox (5.02719pt too wide) in paragraph at lines 865--866
+Overfull \hbox (5.02719pt too wide) in paragraph at lines 866--867
  \TU/lmr/m/n/10 nual 
  []
 
 
-Overfull \hbox (11.91719pt too wide) in paragraph at lines 865--866
+Overfull \hbox (11.91719pt too wide) in paragraph at lines 866--867
  \TU/lmr/m/n/10 Trend 
  []
 
 
-Overfull \hbox (2.3772pt too wide) in paragraph at lines 867--868
+Overfull \hbox (2.3772pt too wide) in paragraph at lines 868--869
  []\TU/lmr/m/n/10 Pct. 
  []
 
 
-Overfull \hbox (0.5772pt too wide) in paragraph at lines 867--868
+Overfull \hbox (0.5772pt too wide) in paragraph at lines 868--869
  \TU/lmr/m/n/10 Sig. 
  []
 
 
-Overfull \hbox (2.3772pt too wide) in paragraph at lines 869--870
+Overfull \hbox (2.3772pt too wide) in paragraph at lines 870--871
  []\TU/lmr/m/n/10 Pct. 
  []
 
 
-Overfull \hbox (0.5772pt too wide) in paragraph at lines 869--870
+Overfull \hbox (0.5772pt too wide) in paragraph at lines 870--871
  \TU/lmr/m/n/10 Sig. 
  []
 
 
-Overfull \hbox (11.5472pt too wide) in paragraph at lines 869--870
+Overfull \hbox (11.5472pt too wide) in paragraph at lines 870--871
  \TU/lmr/m/n/10 Down 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 1.03| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 0.33| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 2.13| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 1.67| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 0.97| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  \TU/lmr/m/n/10 5.08| 
  []
 
 
-Overfull \hbox (3.9372pt too wide) in paragraph at lines 875--875
+Overfull \hbox (3.9372pt too wide) in paragraph at lines 876--876
  \TU/lmr/m/n/10 2.45| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  []|\TU/lmr/m/n/10 0.02| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 875--875
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
  \TU/lmr/m/n/10 0.82| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 877--877
  \TU/lmr/m/n/10 0.16| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 877--877
  []|\TU/lmr/m/n/10 0.32| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 877--877
  []|\TU/lmr/m/n/10 0.42| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 876--876
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 877--877
  []|\TU/lmr/m/n/10 0.33| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 876--876
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 877--877
  []|\TU/lmr/m/n/10 50.00| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 876--877
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 877--878
  []|\TU/lmr/m/n/10 50.00| 
  []
 
 
-Overfull \hbox (3.9372pt too wide) in paragraph at lines 877--877
+Overfull \hbox (3.9372pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 7.62| 
  []
 
 
-Overfull \hbox (13.6872pt too wide) in paragraph at lines 877--877
+Overfull \hbox (13.6872pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 150.49| 
  []
 
 
-Overfull \hbox (8.6872pt too wide) in paragraph at lines 877--877
+Overfull \hbox (8.6872pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 19.86| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 877--877
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 59.72| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 877--877
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 80.37| 
  []
 
 
-Overfull \hbox (13.9372pt too wide) in paragraph at lines 877--877
+Overfull \hbox (13.9372pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 235.58| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 877--877
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
  \TU/lmr/m/n/10 85.41| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 53.45| 
  []
 
 
-Overfull \hbox (8.83719pt too wide) in paragraph at lines 878--878
+Overfull \hbox (8.83719pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 44.44| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 50.54| 
  []
 
 
-Overfull \hbox (8.9372pt too wide) in paragraph at lines 878--878
+Overfull \hbox (8.9372pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 29.95| 
  []
 
 
-Overfull \hbox (13.6872pt too wide) in paragraph at lines 878--878
+Overfull \hbox (13.6872pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 115.73| 
  []
 
 
-Overfull \hbox (8.9372pt too wide) in paragraph at lines 878--878
+Overfull \hbox (8.9372pt too wide) in paragraph at lines 879--879
  \TU/lmr/m/n/10 74.55| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--878
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 879--879
  []|\TU/lmr/m/n/10 17.65| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 878--879
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 879--880
  []|\TU/lmr/m/n/10 88.24| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 0.18| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 0.23| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  []|\TU/lmr/m/n/10 0.14| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  []|\TU/lmr/m/n/10 0.73| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  []|\TU/lmr/m/n/10 0.01| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 6.38| 
  []
 
 
-Overfull \hbox (3.83719pt too wide) in paragraph at lines 879--879
+Overfull \hbox (3.83719pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 4.08| 
  []
 
 
-Overfull \hbox (3.9372pt too wide) in paragraph at lines 879--879
+Overfull \hbox (3.9372pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 2.12| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 879--879
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
  \TU/lmr/m/n/10 0.76| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
  \TU/lmr/m/n/10 0.22| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
  \TU/lmr/m/n/10 0.37| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
  \TU/lmr/m/n/10 0.59| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 880--880
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
  \TU/lmr/m/n/10 0.41| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 880--880
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 881--881
  []|\TU/lmr/m/n/10 44.00| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 880--881
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 881--882
  []|\TU/lmr/m/n/10 44.00| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 0.04| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 9.92| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  []|\TU/lmr/m/n/10 0.04| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  []|\TU/lmr/m/n/10 0.00| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  []|\TU/lmr/m/n/10 0.00| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 0.02| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 0.10| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 0.88| 
  []
 
 
-Overfull \hbox (3.6872pt too wide) in paragraph at lines 881--881
+Overfull \hbox (3.6872pt too wide) in paragraph at lines 882--882
  \TU/lmr/m/n/10 1.02| 
  []
 
 
-Overfull \hbox (3.6872pt too wide) in paragraph at lines 882--882
+Overfull \hbox (3.6872pt too wide) in paragraph at lines 883--883
  \TU/lmr/m/n/10 1.30| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 883--883
  []|\TU/lmr/m/n/10 0.00| 
  []
 
 
-Overfull \hbox (4.1872pt too wide) in paragraph at lines 882--882
+Overfull \hbox (4.1872pt too wide) in paragraph at lines 883--883
  \TU/lmr/m/n/10 6.59| 
  []
 
 
-Overfull \hbox (3.9372pt too wide) in paragraph at lines 882--882
+Overfull \hbox (3.9372pt too wide) in paragraph at lines 883--883
  \TU/lmr/m/n/10 3.58| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 882--882
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 883--883
  []|\TU/lmr/m/n/10 31.58| 
  []
 
 
-Overfull \hbox (9.1872pt too wide) in paragraph at lines 882--883
+Overfull \hbox (9.1872pt too wide) in paragraph at lines 883--884
  []|\TU/lmr/m/n/10 63.16| 
  []
 
@@ -2959,27 +2958,33 @@ File: figs/hist-trends_monthly_slope-colored-stroke.png Graphic file (type bmp)
 
 <figs/hist-trends_monthly_slope-colored-stroke.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--899
-[]\TU/lmr/m/n/10 Figure  3: |[]Monthly base-flow trends across western U.S. hea
-dwater basins, colored by
+Underfull \hbox (badness 10000) in paragraph at lines 901--901
+[]\TU/lmr/m/n/10 Figure  3: |[]Historic monthly base-flow trends across western
+ U.S. headwater basins (1950-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--899
-\TU/lmr/m/n/10 Theil–Sen slope and shaped by statistical significance. Upward- 
-and downward-pointing
+Underfull \hbox (badness 10000) in paragraph at lines 901--901
+\TU/lmr/m/n/10 2024), colored by Theil–Sen slope and shaped by statistical sign
+ificance. Upward- and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--899
-\TU/lmr/m/n/10 triangles indicate significant increasing or decreasing trends (
-p < 0.05), respectively, while
+Underfull \hbox (badness 10000) in paragraph at lines 901--901
+\TU/lmr/m/n/10 downward-pointing triangles indicate significant increasing or d
+ecreasing trends (p <
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--899
-\TU/lmr/m/n/10 circles denote non-significant trends. Colors correspond to slop
-e magnitude and direction,
+Underfull \hbox (badness 10000) in paragraph at lines 901--901
+\TU/lmr/m/n/10 0.05), respectively, while circles denote non-significant trends
+. Colors correspond to slope
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 901--901
+\TU/lmr/m/n/10 magnitude and direction, with warmer tones indicating negative t
+rends and cooler tones
  []
 
 [9] [10]
@@ -2990,12 +2995,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.931 \end{CSLReferences}
+l.933 \end{CSLReferences}
                           
 Here is how much of TeX's memory you used:
  21670 strings out of 476179
- 400545 string characters out of 5809543
- 906831 words of memory out of 5000000
+ 400603 string characters out of 5809543
+ 906797 words of memory out of 5000000
  42092 multiletter control sequences out of 15000+600000
  475078 words of font info for 78 fonts, out of 8000000 for 9000
  1354 hyphenation exceptions out of 8191

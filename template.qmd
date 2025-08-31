@@ -6,6 +6,7 @@ format:
     agu-html: default
     html:
         embed-resources: true
+    docx: default
 author:
   - name: Caelum Mroczek
     affiliations:
@@ -62,43 +63,51 @@ knitr::opts_chunk$set(
 
 ### Importance of base flow in headwater systems
 
-Headwater catchments provide a disproportionate share of streamflow in the western U.S. Base flow sustains perennial flow and ecosystems, especially during drought. importance to greater systems, regions of groundwater-surface water interaction
+-   Headwaters contribute disproportionately to total streamflow in the western US
+-   Base flow maintains perennial reaches, supports aquatic ecosystems, and buffers downstream water supply during drought
+-   Critical zones of groundwater–surface water interaction where recharge, storage, and release occur
 
 ### Sensitivity to climate variability and change
 
-Base flow responds to changes in precipitation, temperature, and snowpack. Anticipated shifts include altered seasonality and reduced dry-season flow.
+-   Base flow reflects integrated watershed response to precipitation, snowpack dynamics, evapotranspiration, and groundwater storage
+-   Climate warming drives earlier snowmelt, reduced snowpack, and phase shifts from snow to rain - expected shifts, shifts in streamflow (CITE?)
+    -   Anticipated changes include greater variability, altered seasonality, and diminished summer/early-fall flows
 
 ### Knowledge gap
 
-Limited understanding of base flow seasonality and future response across temporal and spatial scales.
+-   Prior work has focused on either long-term streamflow trends or site-specific base flow studies, but regional synthesis are less common
+    -   Limited understanding of how seasonality shifts across diverse settings
+-   Uncertainty remains about how climate change will reshape base flow across temporal and spatial scales
 
 ### Motivation
 
-Combine trend analysis, climate sensitivity assessment, and machine learning projection.
+-   Integrate observational and modeling approaches to address both historical patterns and future projections
+    -   Bridge statistical analysis (trends, sensitivity) with machine learning models capable of handling nonlinear climate–hydrology relationships
+-   Provide insights into regional water resource vulnerability under climate change
 
 ### Objectives
 
-1)  Quantify seasonal and long-term changes in base flow across western headwaters
-2)  Identify dominant climate drivers of base-flow variability
-3)  Project future base-flow trajectories using LSTM models under climate change scenarios
+1.  Quantify seasonal and long-term changes in base flow across western U.S. headwater catchments (1950–2024)
+2.  Identify dominant climate drivers of base-flow variability
+3.  Project future base-flow trajectories using LSTM models under both SSP2-4.5 and SSP5-8.5 scenarios
 
 ## Data & Methods
 
 ### Data
 
-Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western United States (FIG - STUDY AREA). Streamflow records were downloaded from the USGS National Water Information System for the period 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km². This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability.
+Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western United States (FIG - STUDY AREA). Streamflow records were downloaded from the USGS National Water Information System for the period of water years 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km². This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability.
 
 FIG - STUDY AREA
 
 Headwaters have been operational defined as streams with Strahler stream order 1 or 2 [@golden_advancing_2025; @freeman_hydrologic_2007; @imberger_headwater_2023]. Large-scale stream network datasets may underestimate the extent of localized headwater reaches [@brinkerhoff_importance_2024], indicating that these delineated headwater streams likely represent a minimum bound on actual headwater extent. In this analysis, streamgages located on streams of order 1 to 3 were included to capture cumulative processes in headwater systems. By focusing on headwater systems, we overcome issues of scale that arise from the coarse resolution of national and global models and from the limited availability of catchments with adequate monitoring for both streamflow and climate variables.
 
-Basin boundaries were delineated using the Hydro Network-Linked Data Index from the National Hydrography Dataset [@geological_survey_us_national_2025] . Across the western United States, headwater streams, as defined above, constitute 88.15% of total river length. To assess the representativeness of study sites, their distribution was compared to the full headwater network across the western United States using Köppen climate classifications and the U.S. Forest Service Watershed Condition Framework. All seven major (two-letter) Köppen climate classes present in the region are represented in the study dataset [@peel_updated_2007]. Approximately 90 percent of study basins contained U.S. Forest Service lands, consistent with findings that most western water originates in forested areas (CITE - Brown et al. 2005). Across the region, 49.1 percent of forested headwater catchments are considered at risk, defined as Functioning at Risk or Impaired Function, the study basins represent this well with 48.5 percent of forested catchment areas falling into these categories.
+Basin boundaries were delineated using the Hydro Network-Linked Data Index from the National Hydrography Dataset [@geological_survey_us_national_2025] . Across the western United States, headwater streams, as defined above, constitute 88.15% of total river length. To assess the representativeness of study sites, their distribution was compared to the full headwater network across the western United States using Köppen climate classifications and the U.S. Forest Service Watershed Condition Framework. All seven major (two-letter) Köppen climate classes present in the region are represented in the study dataset [@peel_updated_2007]. Approximately 90 percent of study basins contained U.S. Forest Service lands, consistent with findings that most western water originates in forested areas [@brown]. Across the region, 49.1 percent of forested headwater catchments are considered at risk, defined as Functioning at Risk or Impaired Function, the study basins represent this well with 48.5 percent of forested catchment areas falling into these categories.
 
 Climate data were obtained from the Western United States Dynamically Downscaled Dataset (WUS-D3) [@rahimi_overview_2024], a dynamically downscaled product specifically developed for climate applications in the western United States. WUS-D3 contains simulations from multiple GCMs, including the Community Earth System Model v2 (CESM2) global climate model, downscaled with the Weather Research and Forecasting (WRF) model to a spatial resolution of 9 km [@danabasoglu_community_2020] . CESM2 was selected because it is the only GCM within the WUS-D3 archive that provides simulations for both the SSP2-4.5 and SSP5-8.5 scenarios, allowing direct comparison of both moderate- and high-emissions futures within the modeling framework. The dataset includes a historical period from 1980 to 2014 and extends through 2099 for future projections. Variables used in this study included daily precipitation, daily mean temperature, daily minimum temperature, and daily maximum temperature. Snow precipitation was calculated by summing daily precipitation on days when maximum temperature was below 0 °C. Antecedent moisture was calculated as the cumulative precipitation over the previous three months, following the approach of @ayers_role_2022 , and serves as a proxy for short-term water storage within the basin. Monthly, area-weighted climate summaries were calculated for each basin to align with the temporal resolution of the base-flow dataset and support climate–base flow relationship analyses.
 
 ### Base-flow Separation
 
-Directly estimating base flow from streamflow records presents unique challenges because it cannot be measured directly at the gauge and must be inferred from the total hydrograph (CITE -Eckhardt, 2008). Numerous approaches have been developed for separating base flow from total streamflow, including tracer studies [@gonzales_comparison_2009], graphical interpolation methods [@instituteofhydrology1980; @sloto_hysep_1996] , and digital filtering techniques [@arnold_automated_1995; @eckhardt_how_2005; @nathan_evaluation_1990]. The suitability of these approaches depends on factors such as spatial scale, record length, and study objectives. While the choice of method and parameterization can introduce some subjectivity, prior work has shown that digital filters can provide reliable and repeatable estimates when applied consistently within a study domain [@chapman_comparison_1999; @eckhardt_how_2005; @instituteofhydrology1980; @ayers_role_2022].
+Directly estimating base flow from streamflow records presents unique challenges because it cannot be measured directly at the gauge and must be inferred from the total hydrograph [@eckhardt_comparison_2008]. Numerous approaches have been developed for separating base flow from total streamflow, including tracer studies [@gonzales_comparison_2009], graphical interpolation methods [@instituteofhydrology1980; @sloto_hysep_1996] , and digital filtering techniques [@arnold_automated_1995; @eckhardt_how_2005; @nathan_evaluation_1990]. The suitability of these approaches depends on factors such as spatial scale, record length, and study objectives. While the choice of method and parameterization can introduce some subjectivity, prior work has shown that digital filters can provide reliable and repeatable estimates when applied consistently within a study domain [@chapman_comparison_1999; @eckhardt_how_2005; @instituteofhydrology1980; @ayers_role_2022].
 
 In this study we used the @eckhardt_how_2005 digital filter to estimate base flow from daily streamflow records using this equation:
 
@@ -116,17 +125,38 @@ To classify study basins into groups with similar hydroclimatic regimes, we appl
 
 We used the Mann-Kendall (MK) trend test to determine the presence of trends in the base-flow data at a monthly time-step. The MK test is a nonparametric test that detects monotonic trends in non-normally distributed data. The MK test is widely used in hydrologic studies [@murray_impact_2023; @ayers_role_2022; @woodhouse_upper_2022; @chen_spatial_2021], and was used here to establish statistically significant trends ($\rho$ \< 0.05). Autocorrelation was present in many of the streamflow records used here, as such we employed the modified MK test proposed by @hamed_modified_1998 . The trend magnitude was estimated using the Thiel-Sen slope, a non-parametric technique widely used in hydrologic studies [@rice_continental_2015; @tillman_review_2022; @murray_impact_2023].
 
-We used a linear mixed-effects modeling framework to quantify relationships between monthly baseflow and climate variables. while accounting for the hierarchical structure of the data, where repeated observations are nested within individual basins. All models were fit using log-transformed monthly base flow as the response variable to reduce skewness, stabilize variance, and improve model performance. This approach was selected because it accommodates both fixed effects, representing regional-scale climate drivers, and random effects, capturing site-specific variability that is not explained by the fixed predictors. To address strong multicollinearity among the temperature variables (mean, minimum, and maximum daily temperature), we retained only mean temperature in the mixed-effects model to ensure interpretability of parameter estimates. This constraint was applied only in the mixed-effects framework; the LSTM modeling framework retained all three temperature variables, as deep learning approaches do not require independence among predictors and are capable of capturing nonlinear relationships and interactions.
+We used a linear mixed-effects modeling framework to quantify relationships between monthly baseflow and climate variables. Fixed effects included precipitation, snow, temperature, and antecedent moisture; which capture broad regional-scale climate drivers. A random intercept for each catchment accounts for site-level variability in base flow that is not explained by the fixed predictors. All models were fit using log-transformed monthly base flow as the response variable to reduce skewness, stabilize variance, and improve model performance. To address strong multicollinearity among the temperature variables (mean, minimum, and maximum daily temperature), we retained only mean temperature in the mixed-effects model to ensure interpretability of parameter estimates. This constraint was applied only in the mixed-effects framework; the LSTM modeling framework retained all three temperature variables, as deep learning approaches do not require independence among predictors and are capable of capturing nonlinear relationships and interactions [@razavi21_DL].
 
 ### LSTM Neural Network Modeling
 
 #### Model Framework
 
-This model is designed to predict monthly stream base flow using both climate history and watershed characteristics. It combines two types of input data: (1) a sequence of monthly climate variables over the past two years, and (2) static basin attributes like latitude, elevation, and area.
+This model is designed to predict monthly stream base flow using both climate history and watershed characteristics. It combines two types of input data: (1) a sequence of monthly climate variables over the past 12-months, and (2) static basin attributes like latitude, elevation, and area.
 
 The climate sequence is passed through a Long Short-Term Memory (LSTM) layer, which learns patterns and memory from time series data. The output of this LSTM is combined with the static features and passed through two fully connected layers (also called dense layers) [@hochreiter_long_1997]. Dropout layers are included to reduce overfitting. The final output is a single number: the predicted log-transformed base flow. The model is trained to minimize the difference between its predictions and observed log(base flow), using a loss function based on mean absolute error (MAE). This hybrid architecture allows the model to learn both temporal patterns and site-specific differences in hydrologic behavior.
 
+??FIGURE??
+
 #### Model Training and Testing
+
+Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on cross-validated mean absolute error (MAE) during the 2006–2013 period. Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
+
+??Hyperparams and residuals in SI??
+
+For model evaluation, we validated each cluster-specific LSTM model against climate forcing from the WUS-D3 SSP2-4.5 and SSP5-8.5 datasets and observed base flow (2014–2024). Models were trained on data from 1980–2005 and cross-validated on 2006–2013, then applied to the scenario data to assess predictive skill outside the training period. To reduce sensitivity to initialization, we trained five models per cluster with different random seeds and combined them into a ensemble using the median prediction across seeds. Model skill was quantified using MAE, root mean square error (RMSE), and the Nash–Sutcliffe efficiency (NSE). The ensembled predictions showed improved performance over single-model predictions across clusters and scenarios.
+
+| Cluster | Scenario | MAE   | RMSE  | NSE   |
+|---------|----------|-------|-------|-------|
+| 1       | SSP2-4.5 | 0.852 | 1.70  | 0.708 |
+|         | SSP5-8.5 | 0.811 | 1.64  | 0.730 |
+| 2       | SSP2-4.5 | 0.438 | 0.558 | 0.750 |
+|         | SSP5-8.5 | 0.432 | 0.552 | 0.755 |
+| 3       | SSP2-4.5 | 0.699 | 1.19  | 0.804 |
+|         | SSP5-8.5 | 0.668 | 1.13  | 0.823 |
+| 4       | SSP2-4.5 | 1.43  | 2.55  | 0.714 |
+|         | SSP5-8.5 | 1.40  | 2.49  | 0.727 |
+
+: Ensemble LSTM evaluation metrics (MAE, RMSE, NSE) for each hydroclimatic cluster under SSP2-4.5 and SSP5-8.5 (2014–2024). {#tbl-model_eval}
 
 ## Results
 
@@ -136,14 +166,14 @@ The k-means clustering identified four distinct hydroclimatic groups among the 1
 
 ![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
 
-| Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Mean Base Flow | Base Flow CV |
+| Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Monthly Base Flow Mean (cfs) | Base Flow CV |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | 1 | 10 | 1193.3 | 2106 | 1930 | 107.48 | 5.51 | 4765 | 1.37 |
 | 2 | 17 | 4452.2 | 1266 | 2825 | 200.78 | 5.74 | 51840 | 0.74 |
 | 3 | 50 | 1124.8 | 2330 | 1772 | 85.69 | 3.97 | 4357 | 1.30 |
 | 4 | 38 | 865.1 | 735 | 1263 | 141.28 | 11.06 | 8071 | 1.77 |
 
-: Summary of physical, climatic, and base-flow characteristics for each hydroclimatic cluster. Values represent mean conditions for basins within each cluster; base flow statistics are derived from the full 1950–2024 record. {#tbl-cluster-summary}
+: Summary of physical, climatic, and base-flow characteristics for each hydroclimatic cluster. Values represent mean conditions for basins within each cluster; base-flow statistics are derived from the full 1950–2024 record. Base flow CV indicates the coefficient of variation ($\sigma / \mu$)). {#tbl-cluster-summary}
 
 Cluster 1 (Snowmelt-Dominated Mountain Catchments) occupies steep, high-relief mountain terrain where winter precipitation is primarily stored as snowpack and released during a concentrated late-spring melt period. These basins are located across the study area in high-elevation mountains. Base flow peaks in June, approximately six months after the precipitation maximum, and inter-annual variability is high due to differences in snow accumulation and melt timing.
 
@@ -155,7 +185,7 @@ Cluster 4 (Arid/Monsoon or Ephemeral Basins) occurs at the lowest elevations wit
 
 Across all clusters, precipitation peaks in December, contributing roughly 15–18% of the annual total, and remains elevated through February (@fig-bf-precip-contrib). Snowmelt-dominated clusters (1 and 3) exhibit the largest variability in late-spring base flow, whereas Cluster 4 shows the strongest temperature-driven suppression of base flow in the dry season. These distinct seasonal signatures and sensitivities highlight the potential for divergent base-flow responses to future climate change across hydroclimatic regimes.
 
-![Monthly distribution of baseflow and precipitation as a percentage of the annual total, stratified by hydroclimatic cluster. Baseflow boxes are colored by cluster (Cluster 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue), while precipitation is shown in gray.](figs/cluster-bf_precip_contrib_legends.png){#fig-bf-precip-contrib}
+![Monthly distribution of baseflow and precipitation as a percentage of the annual total, stratified by hydroclimatic cluster. Baseflow boxes are colored by cluster (Cluster 1: green, Cluster 2: red, Cluster 3: yellow, Cluster 4: blue), precipitation is shown in gray.](figs/cluster-bf_precip_contrib_legends.png){#fig-bf-precip-contrib}
 
 ### Historical Base-flow Analysis
 
@@ -175,7 +205,7 @@ When the mixed-effects model was analyzed across all sites [@tbl-mixed-effect_al
 
 : Mixed-effects model results for climate and static predictors of monthly base flow across all study basins. Estimates represent fixed effects on log-transformed base flow, with positive coefficients indicating a positive association and negative coefficients indicating a negative association. Significance codes: \*\*\* p \< 0.001; \*\* p \< 0.01; \* p \< 0.05; ns = not significant. {#tbl-mixed-effect_all-site}
 
-When the model was stratified by hydroclimatic cluster [@tbl-mixed-effect_cluster], key differences in climate–base flow relationships emerged. Antecedent wetness remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the accumulation–melt transition period. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins enhance routing of meltwater into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
+When the model was evaluated by hydroclimatic cluster (@tbl-mixed-effect_cluster), key differences in climate–base flow relationships emerged. Antecedent wetness remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the accumulation–melt transition period. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins enhance routing of meltwater into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
 
 |      Variable       | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
 |:-------------------:|:---------:|:---------:|:---------:|:---------:|
@@ -202,7 +232,7 @@ Across the four hydroclimatic clusters, long-term base-flow trends (1950-2024) v
 | 3 | -0.18 | -0.23 | 0.14 | 0.73 | 0.01 | -6.38 | -4.08 | -2.12 | -0.76 | -0.22 | -0.37 | -0.59 | -0.41 | 44.00 | 44.00 |
 | 4 | -0.04 | -9.92 | 0.04 | 0.00 | 0.00 | -0.02 | -0.10 | -0.88 | -1.02 | -1.30 | 0.00 | -6.59 | -3.58 | 31.58 | 63.16 |
 
-: Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, expressed as percent change per decade from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends. {#tbl-bf-trend_cluster}
+: Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, shown as percent change per decade from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends. {#tbl-bf-trend_cluster}
 
 ![Historic monthly base-flow trends across western U.S. headwater basins (1950-2024), colored by Theil–Sen slope and shaped by statistical significance. Upward- and downward-pointing triangles indicate significant increasing or decreasing trends (p \< 0.05), respectively, while circles denote non-significant trends. Colors correspond to slope magnitude and direction, with warmer tones indicating negative trends and cooler tones indicating positive trends.](figs/hist-trends_monthly_slope-colored-stroke.png){#fig-hist_trends_monthly}
 
@@ -210,13 +240,39 @@ Across the four hydroclimatic clusters, long-term base-flow trends (1950-2024) v
 
 #### Model Validation
 
-#### Spatial Variability of Projected Baseflow
+![Observed vs. predicted monthly log-transformed base flow for the ensemble LSTM models across four hydroclimatic clusters under two climate scenarios (SSP2-4.5 and SSP5-8.5). Each panel shows one cluster and scenario combination. The 1:1 dashed line indicates perfect prediction. Performance metrics (MAE, RMSE, NSE) are shown within each facet, demonstrating consistent model skill across clusters and scenarios, with strongest performance in Clusters 2 and 3 and higher variance in Cluster 4.](figs/fig_obs_vs_pred_ensemble.png){#fig-obs_pred}
 
-#### Temporal Variability of Projected Baseflow
+In @fig-obs_pred, the vertical alignment of points at very low observed values reflects two interacting factors. First, a minimum threshold was imposed on base-flow values prior to log-transformation which made all flows ≤0.001 equal to the same log value. This creates an artificial “fence” of points along the lower bound of the observed axis. Secondly, the LSTM models themselves show weaker skill in reproducing extremely low flows. Because the model was trained using MAE on log(base flow), errors at very low flows contribute less to the loss, and these flows are also noisier and harder to predict. As a result, predictions scatter around the imposed minimum threshold instead of following the 1:1 line.
 
-##### Monthly
+#### Base-Flow Projections
+
+-   predictions produced by scenario (SSP245 vs 585) and future time period
+
+    -   time periods: early (2025-2049), mid (2050-2074), late (2075-2099)
+
+-   Look at seasonality shifts (contribution shift), monthly anomalies from baseline (1980-2013),
+
+##### Temporal Variability of Projected Base Flow
+
+##### Spatial Variability
 
 ## Discussion
+
+-   Summary of key findings
+
+-   Historical trends + Climate sensitivity
+
+-   Model Performance and Validation
+
+-   Projected changes in vase flow (future periods)
+
+-   Spatial and cluster-wise differences
+
+-   Ecological/Water resource implications
+
+-   Comparison with Prior Work
+
+-   Limitations, Uncertainty, Future Directions
 
 ## Conclusions
 

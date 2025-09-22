@@ -227,7 +227,7 @@ Across the four hydroclimatic clusters, long-term, historical base-flow trends (
 
 These pronounced decreases may reflect reduced snowpack and a shift in precipitation phase from snow to rain, increasing the frequency of rain-on-snow events and accelerating seasonal runoff [@musselman_projected_2018].
 
-| Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Annual Trend | Pct. Sig. Up | Pct. Sig. Down |
+| Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Trend | Pct. Sig. Up | Pct. Sig. Down |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 | 1 | 1.22 | 0.38 | 5.60 | 3.92 | 0.50 | -1.31 | -1.71 | 0.08 | -3.22 | -0.64 | 3.14 | 1.10 | 0.44 | 20.69 | 16.38 |
 | 2 | -0.39 | -3.75 | -0.24 | -1.28 | -1.63 | -3.54 | -3.71 | -2.79 | -3.04 | -2.59 | -1.10 | -2.31 | -2.45 | 1.47 | 30.39 |
@@ -254,8 +254,6 @@ In @fig-obs_pred, the vertical alignment of points at very low observed values r
 
 -   Look at seasonality shifts (contribution shift), monthly anomalies from baseline (1980-2013),
 
-
-
 ##### Temporal Variability of Projected Base Flow
 
 ##### Spatial Variability
@@ -272,7 +270,7 @@ The four hydroclimatic clusters capture meaningful differences in both historica
 
 The strong summer declines in Clusters 1–3 suggest reduced snowmelt contributions and a shift in runoff timing. The severe year-round declines in Cluster 2 may reflect a transition from snow to rain, leading to less infiltration and more rapid runoff.
 
-These patterns are consistent with observed and projected trends toward warmer winters, rain-on-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
+These patterns are consistent with observed and projected trends toward warmer winters, rain-son-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
 
 -   Model Performance and Validation
 

@@ -141,7 +141,7 @@ To capture monthly flow dynamics, the model was trained using overlapping 24-mon
 
 #### Model Training and Testing
 
-Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on cross-validated mean absolute error (MAE) during the 2006–2013 period. Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
+Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on minimizing cross-validated mean absolute error (MAE) during the 2006–2013 period (Table S1). Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
 
 | Data Type | Predictor | Description |
 |------------------------|------------------------|------------------------|
@@ -172,24 +172,9 @@ Model training and hyperparameter selection were conducted separately for each h
 
 For model evaluation, we validated each cluster-specific LSTM model against climate forcing from the WUS-D3 SSP2-4.5 and SSP5-8.5 datasets and observed base flow (2014–2024). Models were trained on data from 1980–2005 and cross-validated on 2006–2013, then applied to the scenario data to assess predictive skill outside the training period. To reduce sensitivity to initialization, we trained five models per cluster with different random seeds and combined them into a ensemble using the median prediction across seeds. Model skill was quantified using MAE, root mean square error (RMSE), and the Nash–Sutcliffe efficiency (NSE). The ensembled predictions showed improved performance over single-model predictions across clusters and scenarios.
 
-| Cluster | Scenario | MAE   | RMSE  | NSE   |
-|---------|----------|-------|-------|-------|
-| 1       | SSP2-4.5 | 0.852 | 1.70  | 0.708 |
-|         | SSP5-8.5 | 0.811 | 1.64  | 0.730 |
-| 2       | SSP2-4.5 | 0.438 | 0.558 | 0.750 |
-|         | SSP5-8.5 | 0.432 | 0.552 | 0.755 |
-| 3       | SSP2-4.5 | 0.699 | 1.19  | 0.804 |
-|         | SSP5-8.5 | 0.668 | 1.13  | 0.823 |
-| 4       | SSP2-4.5 | 1.43  | 2.55  | 0.714 |
-|         | SSP5-8.5 | 1.40  | 2.49  | 0.727 |
-
-: Ensemble LSTM evaluation metrics (MAE, RMSE, NSE) for each hydroclimatic cluster under SSP2-4.5 and SSP5-8.5 (2014–2024). {#tbl-model_eval}
-
 ## Results
 
 ### Hydroclimate Clustering
-
-<!--# Cluster 1 vs 3: similar climate and physiography, differ in hydrologic response. Sensitivity (% of change from baseline) differs though volume loss is similar, different historical trends, different response in mixed-effects model -->
 
 The k-means clustering identified four distinct hydroclimatic groups among the 115 study basins, reflecting differences in elevation, relief, basin size, climate regime, and base-flow response characteristics. These clusters capture gradients in snow influence, seasonal precipitation patterns, and base-flow variability across the western United States. Two clusters (1 and 3) are primarily high-elevation, snow-influenced headwaters but differ in their sensitivity to temperature and snowpack persistence. Cluster 2 contains the largest, mixed-regime basins with relatively stable base flow and Cluster 4 represents low-elevation, arid to monsoon-influenced basins with the lowest base flow and highest interannual variability. Descriptive statistics for each cluster, including key climate, physiographic, and base-flow metrics, are provided in @tbl-cluster-summary, and the spatial distribution of clusters across the study area is shown in @fig-cluster-map.
 
@@ -208,7 +193,7 @@ Cluster 1 (Snowmelt-Dominated Mountain Catchments) occupies steep, high-relief m
 
 Cluster 2 (Mixed-Regime Large Catchments) represents moderate-elevation, high-relief basins with the largest drainage areas in the dataset. Most of these basins are found along the Cascade Range in the north west of the study area along CA, OR, and WA. Base flow peaks earlier, in May, about five months after the precipitation maximum. Snowmelt remains important, but basin size and integrated flow paths buffer short-term variability, resulting in lower inter-annual variability during peak months.
 
-Cluster 3 (Snow-Responsive Headwaters) also peaks in June but differs from Cluster 1 in showing a stronger positive association between temperature and base flow, consistent with more immediate snowmelt responses during warm periods. These basins are found throughout the Intermountain West where they may experience earlier onset of melt or mid-winter melt events, leading to sustained base flow through early summer and moderate-to-high interannual variability in late spring.
+Cluster 3 (Snowy, Responsive Headwaters) also peaks in June but differs from Cluster 1 in showing a stronger positive association between temperature and base flow, consistent with more immediate snowmelt responses during warm periods. These basins are found throughout the Intermountain West where they may experience earlier onset of melt or mid-winter melt events, leading to sustained base flow through early summer and moderate-to-high interannual variability in late spring.
 
 Cluster 4 (Arid/Monsoon or Ephemeral Basins) occurs at the lowest elevations with minimal snow influence. Base flow peaks in March, only about three months after the precipitation maximum, reflecting rapid winter-to-spring runoff and limited storage. These basins are mostly located along the Pacific coast. Flows recede quickly, and summer base flow is minimal due to high evapotranspiration and low infiltration from monsoon rains.
 
@@ -252,7 +237,7 @@ Together, these results highlight that while antecedent moisture is a dominant c
 
 #### Base-Flow Trends and Seasonality
 
-Across the four hydroclimatic clusters, long-term, historical base-flow trends (1950-2024) varied in both magnitude and seasonal timing [@tbl-bf-trend_cluster]. The most widespread declines occurred in early summer, especially in June and July, consistent with reductions in snowmelt-driven base flow. Modest increases were observed in winter and early spring months, particularly January and March in Cluster 1 and March–April in Cluster 3. Cluster 1 showed a mix of increases in colder months and decreases in summer, resulting in a small overall positive annual trend. Cluster 2 exhibited consistent and large negative trends across nearly all months, with the strongest declines in February, June, and December. Clusters 3 and 4 showed modest negative trends overall, with variability in both direction and timing depending on the month. These patterns highlight seasonal shifts in base flow that differ across hydroclimatic regimes.
+Across the four hydroclimatic clusters, long-term, historical base-flow trends (1950-2024) varied in both magnitude and seasonal timing (@tbl-bf-trend_cluster; @fig-hist_trends_monthly). The most widespread declines occurred in early summer, especially in June and July, consistent with reductions in snowmelt-driven base flow. Historical rates in @tbl-bf-trend_cluster are continuous Theil-Sen slopes (trend per decade) rather than baseline-referenced anomalies, and are thus not expressed in the same units as projected annual change (Section 3.3). Modest increases were observed in winter and early spring months, particularly January and March in Cluster 1 and March–April in Cluster 3. Cluster 1 showed a mix of increases in colder months and decreases in summer, resulting in a small overall positive annual trend. Cluster 2 exhibited consistent and large negative trends across nearly all months, with the strongest declines in February, June, and December. Clusters 3 and 4 showed modest negative trends overall, with variability in both direction and timing depending on the month. These patterns highlight seasonal shifts in base flow that differ across hydroclimatic regimes.
 
 | Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Trend | Pct. Sig. Up | Pct. Sig. Down |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -273,51 +258,61 @@ Across the four hydroclimatic clusters, long-term, historical base-flow trends (
 
 In @fig-obs_pred, the vertical alignment of points at very low observed values reflects two interacting factors. First, a minimum threshold was imposed on base-flow values prior to log-transformation which made all flows ≤0.01 cfs equal to the same log value. This creates an artificial “fence” of points along the lower bound of the observed axis. Secondly, the LSTM models themselves show weaker skill in reproducing extremely low flows. Because the model was trained using MAE on log(base flow), errors at very low flows contribute less to the loss, and these flows are also noisier and harder to predict. As a result, predictions scatter around the imposed minimum threshold instead of following the 1:1 line.
 
+Model performance metrics for each cluster and scenario are summarized in @tbl-model_eval. Overall, the ensemble LSTM models demonstrated strong predictive skill across all hydroclimatic clusters and scenarios during the validation period (2014–2024). Clusters 2 and 3 exhibited the best performance, with low MAE and RMSE values and high NSE scores, indicating accurate capture of both magnitude and variability in base flow. Cluster 1 showed moderate skill, with relatively low MAE and RMSE values, though also showing low NSE values. Cluster 4 had the highest errors and a low NSE, reflecting the challenges of modeling base flow in regimes with high variability (e.g. arid and monsoon-influenced regimes). Performance was generally consistent between SSP2-4.5 and SSP5-8.5 scenarios, suggesting that the model is robust to different climate forcings. Residual plots are found in Figure S1 and S2.
+
+| Cluster | Scenario | MAE   | RMSE  | NSE   |
+|---------|----------|-------|-------|-------|
+| 1       | SSP2-4.5 | 0.852 | 1.70  | 0.708 |
+|         | SSP5-8.5 | 0.811 | 1.64  | 0.730 |
+| 2       | SSP2-4.5 | 0.438 | 0.558 | 0.750 |
+|         | SSP5-8.5 | 0.432 | 0.552 | 0.755 |
+| 3       | SSP2-4.5 | 0.699 | 1.19  | 0.804 |
+|         | SSP5-8.5 | 0.668 | 1.13  | 0.823 |
+| 4       | SSP2-4.5 | 1.43  | 2.55  | 0.714 |
+|         | SSP5-8.5 | 1.40  | 2.49  | 0.727 |
+
+: Ensemble LSTM evaluation metrics (MAE, RMSE, NSE) for each hydroclimatic cluster under SSP2-4.5 and SSP5-8.5 (2014–2024). {#tbl-model_eval}
+
 #### Magnitude and Scenario Dependence
 
-Projections indicate persistent declines in base flow across western U.S. headwater basins through the 21st century, with the magnitude of reductions varying between emission scenarios. Relative to the 1980–2013 baseline, both SSP2-4.5 and SSP5-8.5 show early-century (2025–2049) anomalies near −30 to −40%, followed by continued declines in mid- (2050–2074) and late-century (2075–2099) periods. Trajectories remain similar through mid-century in both scenarios, but by late-century, SSP5-8.5 produces substantially larger reductions and greater spread among sites. These results suggest that base-flow sensitivity to emissions pathways is most pronounced after 2050. By late-century, annual base-flow anomalies are expected to be between -45 to -65%, relative to the 1980-2013 baseline [@fig-annualized_anomaly].
+Projections indicate persistent declines in base flow across western U.S. headwater basins throughout the 21st century, with the magnitude of reductions varying between emission scenarios. Relative to the 1980–2013 baseline, both SSP2-4.5 and SSP5-8.5 exhibit similar early-century (2025–2049) anomalies, followed by continued declines through mid- (2050–2074) and late-century (2075–2099) periods. Trajectories remain comparable through mid-century in both scenarios, but, by late-century, SSP5-8.5 produces substantially larger reductions and greater inter-site variability (@fig-annualized_anomaly a).
+
+Early-century base-flow anomalies are projected to range from –30 to –40 %, corresponding to basin-averaged losses of 3.0–3.4 million AF yr⁻¹. Mid-century reductions deepen to –40 to –50 % (3.6–4.1 million AF yr⁻¹), and by late-century, annual anomalies reach –45 to –65 %, or roughly 3.7–5.8 million AF yr⁻¹, relative to the 1980–2013 baseline (@fig-annualized_anomaly). These patterns indicate that while early-century changes are similar across scenarios, the high-emission SSP5-8.5 pathway drives markedly greater declines in the late-century.
 
 ![Projected magnitude of base-flow change across western U.S. headwaters under SSP2-4.5 and SSP5-8.5 scenarios. (a) Regional annual base-flow anomalies (percent difference from the 1980–2013 mean) with shaded 25–75 % ranges across basins. Both scenarios project sustained declines through the 21st century, with greater divergence after \~2050. Median losses are \~30–40 % by mid-century and \~45–65 % by late century. (b) Cluster-balanced mean annual volumetric change (million acre-feet yr⁻¹) summarized by period and scenario. Region-wide average losses equal approximately –3.7 million AF yr⁻¹ for SSP2-4.5 and –5.7 million AF yr⁻¹ for SSP5-8.5 by end-of-century, emphasizing the greater depletion expected under higher-emission conditions.](figs/magnitude-fig.png){#fig-annualized_anomaly}
 
 #### Relative and Absolute Cluster Change
 
-![Monthly base-flow anomalies by hydroclimatic cluster, period, and emissions scenario. (a) Percent anomalies show the relative change in base-flow volume compared to the 1980–2013 baseline, summarized by cluster medians. Snow- and monsoon-influenced clusters (1 and 4) exhibit the largest relative declines, while Cluster 2 experiences smaller proportional reductions. (b) Corresponding volumetric anomalies (million acre-feet per month) highlight the absolute magnitude of change. Despite modest percent reductions, Cluster 2 contributes the greatest total volume loss across all future periods. ](figs/monthly-change_vol-perc.png)
+![Monthly base-flow anomalies by hydroclimatic cluster, period, and emissions scenario. (a) Percent anomalies show the relative change in base-flow volume compared to the 1980–2013 baseline, summarized by cluster medians. Snow- and monsoon-influenced clusters (1 and 4) exhibit the largest relative declines, while Cluster 2 experiences smaller proportional reductions. (b) Corresponding volumetric anomalies (million acre-feet per month) highlight the absolute magnitude of change. Despite modest percent reductions, Cluster 2 contributes the greatest total volume loss across all future periods.](figs/monthly-change_vol-perc.png){#fig-monthly-anomaly_period}
 
-Together, these panels demonstrate that clusters differ in both sensitivity (percent) and hydrologic significance (volume).
+Cluster-level projections reveal clear heterogeneity in base-flow responses [@fig-monthly-anomaly_period]. Snowy, responsive Cluster 3 and arid/monsoon-influenced Cluster 4 exhibit the largest relative declines, with median reductions of \~80–90% by late-century under SSP5-8.5 (@fig-monthly-anomaly_period a). Cluster 1, snow-dominated mountainous catchments, showed less declines in the summer and fall. In contrast, mixed-regime Cluster 2 shows more moderate, but variable, relative declines of \~20–70% throughout the year, likely due to its larger size and integrated flow paths buffering against extreme variability. When considering absolute volumetric changes (@fig-monthly-anomaly_period b), Cluster 2 contributes the greatest total loss across all future periods, despite its smaller relative declines. This reflects its' larger base-flow volumes and highlights the importance of considering both relative sensitivity (percent) and hydrologic significance (volume) when assessing climate impacts on streamflow.
 
 #### Changes in Base-flow Timing
 
-![](figs/seasonal_shifts_baseflow_range.png){#fig-seasonal_shift}
+![Monthly change in base-flow contribution by hydroclimatic cluster for end-of-century projections relative to the 1980–2013 baseline. Colored lines show SSP2-4.5 (blue) and SSP5-8.5 (red). Clusters 1–3 exhibit modest winter–spring increases and strong summer declines (up to \~5 %), while Cluster 4 shows earlier winter peaks and sustained reductions through summer. These shifts indicate earlier groundwater discharge and reduced summer base-flow persistence under warmer futures.](figs/monthly_contrib_shift.png){#fig-monthly-contrib}
 
-------------------------------------------------------------------------
-
-#### Temporal variability
-
-Projected base-flow anomalies exhibit marked shifts in seasonal timing and inter-annual variability. Monthly anomalies, relative to the 1980–2013 baseline, highlight earlier contributions in spring and sharp reductions in late-summer base flow, particularly under SSP585. These changes are consistent with snowpack loss and earlier runoff timing in snowmelt-dominated basins. <!--# Inter-annual variability persists throughout the century, with year-to-year fluctuations of 10–20% around the long-term trajectories, suggesting that extreme low-flow years will remain a feature of future hydrology even as the mean declines.  -->
-
-#### Spatial variability
-
-Cluster-level projections reveal clear heterogeneity in base-flow responses. Snowmelt-dominated clusters (e.g., Cluster 2) show the steepest and most consistent declines, while rain-fed or mixed clusters (e.g., Clusters 1 and 3) display more moderate anomalies and greater variability among basins. These results highlight that vulnerability to climate change is not uniform, even within shared hydroclimatic regimes.
-
-![](figs/seasonal_anomaly_percent.png){#fig-seasonal_period-anomaly}
-
-#### Scenario contrasts
-
-Direct comparisons between SSP2-4.5 and SSP5-8.5 emphasize how emissions pathways amplify base-flow declines. Although anomalies under both scenarios overlap through mid-century, divergence becomes more evident after \~2060. By late-century, basins under SSP5-8.5 are projected to experience 10–20% larger declines relative to SSP2-4.5, with the gap particularly pronounced in snowmelt-dominated regions. These contrasts underscore the long-term importance of emissions mitigation in reducing the magnitude of base-flow losses across western headwaters.
+Projected base-flow anomalies show clear shifts in seasonal timing (@fig-monthly-contrib). Relative to the 1980–2013 baseline, future projections indicate earlier contributions in spring and pronounced reductions in late-summer base flow, particularly under SSP5-8.5. The greatest reductions in base-flow contribution are seen in June across all clusters. Clusters 1, 2, and 3 exhibit modest winter–spring increases of approximately 1–5 %, followed by strong summer declines reaching −4 to −5 % of annual base flow. Cluster 4, the most water-limited regime, displays an earlier winter peak (\~5 %) and sustained reductions through summer and fall. These patterns suggest earlier groundwater release and diminished late-season persistence, consistent with warming-driven snowpack loss, reduced recharge, and earlier runoff timing in snowmelt-dominated basins.
 
 ## Discussion
 
--   Summary of key findings
+### Summary of key findings
 
 ### Spatial and cluster-wise differences
 
 The four hydroclimatic clusters capture meaningful differences in both historical base flow behavior and climate sensitivity. Clusters 1 and 3 respond primarily to snow accumulation and melt dynamics but differ in their temperature sensitivity. Cluster 2 shows the least extreme declines, likely due to the presence of perennial glaciers in the Cascades Range. Cluster 4 exhibits low, variable base flow dominated by short recharge events and evaporative losses. These distinctions provide a useful framework for regional analysis and forecasting of future hydrologic change.
 
+\
+<!--# Cluster 1 vs 3: similar climate and physiography, differ in hydrologic response. Sensitivity (% of change from baseline) differs though volume loss is similar, different historical trends, different response in mixed-effects model -->
+
 ### Historical trends + Climate sensitivity
 
 The strong summer declines in Clusters 1–3 suggest reduced snowmelt contributions and a shift in runoff timing.
 
-These patterns are consistent with observed and projected trends toward warmer winters, rain-son-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
+These patterns are consistent with observed and projected trends toward warmer winters, rain-on-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
+
+### Scenario contrasts
+
+Direct comparisons between SSP2-4.5 and SSP5-8.5 emphasize how emissions pathways amplify base-flow declines. Although anomalies under both scenarios overlap through mid-century, divergence becomes more evident after \~2060. By late-century, basins under SSP5-8.5 are projected to experience 10–20% larger declines relative to SSP2-4.5 (@fig-annualized_anomaly), with the gap particularly pronounced in snowmelt-dominated regions (@fig-monthly-anomaly_period). These contrasts underscore the long-term importance of emissions mitigation in reducing the magnitude of base-flow losses across western headwaters.
 
 -   Model Performance and Validation
 

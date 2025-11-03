@@ -135,17 +135,17 @@ We used a linear mixed-effects modeling framework to quantify relationships betw
 
 This model is designed to predict monthly stream base flow using both climate history and watershed characteristics. It combines two types of input data: (1) a sequence of monthly climate variables over the past 24-months, and (2) static basin attributes like latitude, elevation, and area.
 
-To capture monthly flow dynamics, the model was trained using overlapping 24-month climate input sequences (e.g., months 1–24, 2–25, 3–26, etc.), where each sequence was used to predict base flow in the subsequent month. This sliding-window approach increases the number of training samples and enables the model to learn temporal dependencies and incremental changes in base flow across consecutive months. The climate sequence is combined with the static features and passed through two fully connected layers (also called dense layers) [@hochreiter_long_1997], with dropout included to reduce overfitting. The final output is a single number: the predicted log-transformed base flow for the subsequent month. The model is trained to minimize the difference between its predictions and observed log(base flow), using a loss function based on mean absolute error (MAE). This hybrid architecture allows the model to learn both temporal patterns and site-specific differences in hydrologic behavior.
+To capture monthly flow dynamics, the model was trained using overlapping 24-month climate input sequences (e.g., months 1–24, 2–25, 3–26, etc.), where each sequence was used to predict base flow in the subsequent month (@fig-lstm_diagram). This sliding-window approach increases the number of training samples and enables the model to learn temporal dependencies and incremental changes in base flow across consecutive months. The climate sequence is combined with the static features and passed through two fully connected layers (also called dense layers) [@hochreiter_long_1997], with dropout included to reduce overfitting [@JMLR:v15:srivastava14a]. The final output is a single number: the predicted log-transformed base flow for the subsequent month. The model is trained to minimize the difference between its predictions and observed log(base flow), using a loss function based on mean absolute error (MAE). This hybrid architecture allows the model to learn both temporal patterns and site-specific differences in hydrologic behavior.
 
-??FIGURE??
+![Schematic of the Long Short-Term Memory (LSTM) neural network used to predict monthly base flow from climate and basin attributes. A 24-month sequence of climate variables and static basin characteristics are passed through an input layer to an LSTM layer that captures temporal dependencies and memory of prior climate conditions. Outputs are combined in a dense layer with dropout regularization, and the final output layer predicts the log-transformed base flow for the next month.](figs/LSTM-diagram.png){#fig-lstm_diagram}
 
 #### Model Training and Testing
 
 Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on minimizing cross-validated mean absolute error (MAE) during the 2006–2013 period (Table S1). Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
 
-| Data Type | Predictor | Description |
-|------------------------|------------------------|------------------------|
-| **Temperature** | `t2` | Mean monthly near-surface (2 meter) air temperature (°C) |
+| **Data Type** | **Predictor** | **Description** |
+|----------------|----------------|----------------------------------------|
+| **Temperature** | `t2` | Mean monthly near-surface (2 m) air temperature (°C) |
 |  | `t2max` | Monthly maximum temperature (°C) |
 |  | `t2min` | Monthly minimum temperature (°C) |
 |  | `t2_lag1` | Mean temperature, 1-month lag |
@@ -157,7 +157,7 @@ Model training and hyperparameter selection were conducted separately for each h
 |  | `prec_lag6` | Precipitation, 6-month lag |
 |  | `rolling_prec3` | 3-month rolling precipitation mean (mm) |
 |  | `ppt_change` | Monthly precipitation change (current minus prior month) |
-| **Snow / Moisture** | `snow` | Precipitation falling when `t2max` \< 0ºC (mm) |
+| **Snow / Moisture** | `snow` | Precipitation falling when `t2max` \< 0 °C (mm) |
 |  | `prec_mois` | Antecedent moisture (3-month precipitation sum) |
 |  | `prec_mois_lag1` | Antecedent moisture, 1-month lag |
 | **Seasonality** | `month_sin` | Cyclical encoding of month (sine transform) |
@@ -301,7 +301,6 @@ Projected base-flow anomalies show clear shifts in seasonal timing (@fig-monthly
 
 The four hydroclimatic clusters capture meaningful differences in both historical base flow behavior and climate sensitivity. Clusters 1 and 3 respond primarily to snow accumulation and melt dynamics but differ in their temperature sensitivity. Cluster 2 shows the least extreme declines, likely due to the presence of perennial glaciers in the Cascades Range. Cluster 4 exhibits low, variable base flow dominated by short recharge events and evaporative losses. These distinctions provide a useful framework for regional analysis and forecasting of future hydrologic change.
 
-\
 <!--# Cluster 1 vs 3: similar climate and physiography, differ in hydrologic response. Sensitivity (% of change from baseline) differs though volume loss is similar, different historical trends, different response in mixed-effects model -->
 
 ### Historical trends + Climate sensitivity

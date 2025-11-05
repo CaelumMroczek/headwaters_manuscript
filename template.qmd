@@ -62,25 +62,17 @@ knitr::opts_chunk$set(
 
 Increasing water demand, land-use change, and climate-driven shifts in precipitation are intensifying water scarcity across the western United States [@taylor_ground_2013; @diffenbaugh2015]. Headwater catchments are the primary sources of streamflow, sustaining downstream ecosystems, agriculture, and communities. Globally, headwater systems comprise approximately 80% of river networks [@golden_advancing_2025] and contribute disproportionately to total streamflow, particularly in mountainous and semi-arid regions (CITE). These catchments are critical zones of groundwater–surface water interaction, where recharge, storage, and discharge processes regulate the timing and persistence of streamflow [@thomascwinter1998].
 
-### Sensitivity to climate variability and change
+Base flow is the sustained portion of streamflow that is derived from groundwater discharge [@usgs_water-glossary] and provides a surface-water view of the groundwater system. It maintains perennial reaches, buffers flow during drought, supports aquatic habitats, and sustains downstream water supply. Base flow reflects the integrated response of the watershed to precipitation, snow accumulation and melt, evapotranspiration, and subsurface storage [@smakhtin01]. As such, base-flow magnitude and timing provide key indicators of groundwater availability and watershed resilience under changing climate conditions [@tague_groundwater_2009; @diffenbaugh2015].
 
--   Base flow reflects integrated watershed response to precipitation, snowpack dynamics, evapotranspiration, and groundwater storage
--   Climate warming drives earlier snowmelt, reduced snowpack, and phase shifts from snow to rain - expected shifts, shifts in streamflow [@diffenbaugh2015].
-    -   Anticipated changes include greater variability, altered seasonality, and diminished summer/early-fall flows
+Groundwater recharge, which is the source of base flow, is highly sensitive to shifts in temperature, snowpack, and precipitation. Warming across the western United States has already reduced snow accumulation, shifted precipitation regimes from snow to rain, and increased evaporative demand [@barnett_potential_2005; @mote_etal18]. These changes alter groundwater recharge, advance seasonal streamflow peaks, and diminish late-season flows. However, the magnitude and timing of these effects differ across hydroclimatic regimes. Quantifying regime-specific climatic controls is essential for anticipating water availability under continued warming.
 
-### Knowledge gap
+Previous studies have advanced understanding of base-flow variability [@beck_global_2013; @santhi_regional_2008] and its relationship to climate drivers [@ayers_role_2022; @tan_global_2020] in different settings. Extending these analyses to incorporate climate projections is critical for anticipating how groundwater-supported flows, especially in delicate headwaters, will respond to climate change. As noted by @golden_advancing_2025, an outstanding opportunity in headwater science is to move beyond isolated studies toward an integrative understanding of headwater flow regimes across space and time. This integrated approach is limited by the scarcity of adequately gauged headwater sites and by large-scale analyses that generalize hydrologic behavior across diverse climatic and physiographic settings.
 
--   Prior work has focused on either long-term streamflow trends or site-specific base flow studies, but regional synthesis are less common
-    -   Limited understanding of how seasonality shifts across diverse settings
--   Uncertainty remains about how climate change will reshape base flow across temporal and spatial scales
+Addressing these challenges adequately requires an approach that captures both the historical evolution and the future trajectory of base flow. While headwater systems responds on the basin scale, the overarching effects of climate change on hydrologic systems is best understood on a regional scale [@gorelick2015]. To integrate streamflow–climate relationships across diverse settings, we grouped study sites into distinct hydroclimatic clusters that share similar climatic and physiographic controls on base flow.This clustering links local headwater processes to broader regional patterns, allowing comparison of regime-specific responses to climate forcing. Within this framework, we integrate long-term streamflow observations with climate-driven modeling to examine how base flow has changed, what drives those changes, and how it is likely to evolve under future conditions.
 
-### Motivation
+Statistical analyses, including Mann–Kendall trend test, Thiel-Sen slope, and mixed-effects modeling, provide the historical understanding of long-term patterns and are used to quantify climate sensitivity. However, these approaches cannot fully represent nonlinear and time-dependent systems, which are inherent in groundwater–surface water systems (CITE). To shore these gaps, we use cluster-specific Long Short-Term Memory (LSTM) neural networks, which are excel at capturing time series dependencies and have been shown to capture complex climate–hydrology interactions (CITE). Our cluster-based framework groups basins by shared hydroclimatic characteristics, allowing the LSTM models to resolve regime-specific dynamics and improve regional interpretability.
 
--   Integrate observational and modeling approaches to address both historical patterns and future projections
-    -   Bridge statistical analysis (trends, sensitivity) with machine learning models capable of handling nonlinear climate–hydrology relationships
--   Provide insights into regional water resource vulnerability under climate change
-
-While each headwater system operates on the basin scale, the overarching effects of climate change on hydrologic systems is best understood on a regional scale [@gorelick2015]. To support climate adaptation and water management, we developed a regional modelling framework to quantify base-flow changes and identify the climatic drivers shaping long-term trends. Specifically, this study aims to:
+Together, these approaches enable a regional modelling framework to quantify base-flow changes and identify the climatic drivers shaping long-term trends. Specifically, this study aims to:
 
 1.  Quantify seasonal and long-term changes in historic base flow across western U.S. headwater catchments (1950–2024);
 2.  Identify dominant climate drivers of base-flow variability (1980-2014); and
@@ -137,7 +129,7 @@ To capture monthly flow dynamics, the model was trained using overlapping 24-mon
 Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on minimizing cross-validated mean absolute error (MAE) during the 2006–2013 period (Table S1). Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
 
 | **Data Type** | **Predictor** | **Description** |
-|------------------|------------------|-----------------------------------|
+|-------------------|-------------------|----------------------------------|
 | **Temperature** | `t2` | Mean monthly near-surface (2 m) air temperature (°C) |
 |  | `t2max` | Monthly maximum temperature (°C) |
 |  | `t2min` | Monthly minimum temperature (°C) |

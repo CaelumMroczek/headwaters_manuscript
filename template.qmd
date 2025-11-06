@@ -62,7 +62,7 @@ knitr::opts_chunk$set(
 
 Increasing water demand, land-use change, and climate-driven shifts in precipitation are intensifying water scarcity across the western United States [@taylor_ground_2013; @diffenbaugh2015]. Headwater catchments are the primary sources of streamflow, sustaining downstream ecosystems, agriculture, and communities. Globally, headwater systems comprise approximately 80% of river networks [@golden_advancing_2025] and contribute disproportionately to total streamflow, particularly in mountainous and semi-arid regions (CITE). These catchments are critical zones of groundwater–surface water interaction, where recharge, storage, and discharge processes regulate the timing and persistence of streamflow [@thomascwinter1998].
 
-Base flow is the sustained portion of streamflow that is derived from groundwater discharge [@usgs_water-glossary] and provides a surface-water view of the groundwater system. It maintains perennial reaches, buffers flow during drought, supports aquatic habitats, and sustains downstream water supply. Base flow reflects the integrated response of the watershed to precipitation, snow accumulation and melt, evapotranspiration, and subsurface storage [@smakhtin01]. As such, base-flow magnitude and timing provide key indicators of groundwater availability and watershed resilience under changing climate conditions [@tague_groundwater_2009; @diffenbaugh2015].
+Base flow is the sustained portion of streamflow that is derived from groundwater discharge (or other delayed sources) [@usgs_water-glossary] and provides a surface-water view of the groundwater system. It maintains perennial reaches, buffers flow during drought, supports aquatic habitats, and sustains downstream water supply. Base flow reflects the integrated response of the watershed to precipitation, snow accumulation and melt, evapotranspiration, and subsurface storage [@smakhtin01]. As such, base-flow magnitude and timing provide key indicators of groundwater availability and watershed resilience under changing climate conditions [@tague_groundwater_2009; @diffenbaugh2015].
 
 Groundwater recharge, which is the source of base flow, is highly sensitive to shifts in temperature, snowpack, and precipitation. Warming across the western United States has already reduced snow accumulation, shifted precipitation regimes from snow to rain, and increased evaporative demand [@barnett_potential_2005; @mote_etal18]. These changes alter groundwater recharge, advance seasonal streamflow peaks, and diminish late-season flows. However, the magnitude and timing of these effects differ across hydroclimatic regimes. Quantifying regime-specific climatic controls is essential for anticipating water availability under continued warming.
 
@@ -82,9 +82,9 @@ Together, these approaches enable a regional modelling framework to quantify bas
 
 ### Data
 
-Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western states [@fig-cluster-map]. Streamflow records were downloaded from the USGS National Water Information System for the period of water years 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km².
+Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western states [@fig-cluster-map]. Streamflow records were downloaded from the USGS National Water Information System for the period of water years 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km²
 
-![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
+![MOCKUP \> Study region and analysis timeline. (a) Study basins across the western United States grouped into four clusters representing distinct hydroclimatic regimes as defined in Section. (b) Study timeline showing observed streamflow (1950–2024) and historical (1980–2013) and projected (2014–2099) climate periods under SSP2-4.5 and SSP5-8.5 scenarios.](figs/study-area_MOCKUP.png){#fig-cluster-map}
 
 Headwaters have been operational defined as streams with Strahler stream order 1 or 2 [@golden_advancing_2025; @freeman_hydrologic_2007; @imberger_headwater_2023]. It's been found that large-scale stream network datasets may underestimate the extent of localized headwater reaches [@brinkerhoff_importance_2024], indicating that these delineated headwater streams likely represent a minimum bound on actual headwater extent. To overcome this deficiency, in this study, streamgages located on streams of order 1 to 3 were included to capture the cumulative processes of headwater systems. By focusing on headwater systems, we overcome issues of scale that arise from the coarse resolution of national and global models and from the limited availability of catchments with adequate monitoring for both streamflow and climate variables.
 
@@ -106,7 +106,7 @@ where $b_t$ is the filtered base-flow response at time step $t$, $Q_t$ is the ob
 
 ### Hydroclimate Clustering
 
-To classify study basins into groups with similar hydroclimatic regimes, we applied k-means clustering to basin-averaged climate and hydrologic variables. Clustering was conducted on long-term mean values of base flow magnitude and variability, precipitation, snow-derived precipitation, mean temperature, antecedent wetness, and static physiographic attributes including drainage area, relief, and elevation. Variables were standardized (z-scores) prior to clustering to ensure equal weighting across metrics with different units and magnitudes. The optimal number of clusters was selected based on a combination of the elbow method and interpretability of known hydrologic regimes in the western United States. K-means was chosen because it provides a reproducible and computationally efficient method for partitioning basins into internally cohesive groups. This approach is well suited for large-sample hydrology applications where hydroclimatic gradients are continuous rather than categorical [@ikotun_k-means_2023]. The resulting clusters were used to stratify subsequent statistical and machine learning analyses, allowing for the identification of climate–base flow relationships and projected changes within distinct hydrologic response regimes.
+To classify study basins into groups with similar hydroclimatic regimes, we applied k-means clustering to basin-averaged climate and hydrologic variables. Clustering was conducted on long-term records of base flow magnitude and variability, precipitation, snow-derived precipitation, mean temperature, antecedent moisture, and static physiographic attributes including drainage area, relief, and elevation. To compare across watersheds with different areas, precipitation, and discharge, we normalized variables (z-scores) prior to clustering to ensure equal weighting. The optimal number of clusters was selected based on a combination of the elbow method and interpretability of known hydrologic regimes in the western United States. K-means was chosen because it is an efficient method for partitioning basins into internally cohesive groups which minimize within-group variance and enhances the detection of coherent regional trends in streamflow across diverse hydroclimatic settings [@dethier2020]. This approach is well suited for large-sample hydrology applications where hydroclimatic gradients are continuous rather than categorical [@ikotun_k-means_2023]. The resulting clusters were used to stratify subsequent statistical and machine learning analyses, allowing for the identification of climate–base flow relationships and projected changes within distinct hydrologic response regimes.
 
 ### Statistical Models
 
@@ -174,7 +174,7 @@ The k-means clustering identified four distinct hydroclimatic groups among the 1
 
 Cluster 1 (Snowmelt-Dominated Mountain Catchments) occupies steep, high-relief mountain terrain where winter precipitation is primarily stored as snowpack and released during a concentrated late-spring melt period. These basins are located across the study area in high-elevation mountains. Base flow peaks in June, approximately six months after the precipitation maximum, and inter-annual variability is high due to differences in snow accumulation and melt timing.
 
-Cluster 2 (Mixed-Regime Large Catchments) represents moderate-elevation, high-relief basins with the largest drainage areas in the dataset. Most of these basins are found along the Cascade Range in the north west of the study area along CA, OR, and WA. Base flow peaks earlier, in May, about five months after the precipitation maximum. Snowmelt remains important, but basin size and integrated flow paths buffer short-term variability, resulting in lower inter-annual variability during peak months.
+Cluster 2 (Mixed-Regime Large Catchments) represents moderate-elevation, high-relief basins with the largest drainage areas in the dataset. Most of these basins are found along the Cascade Range in the north west of the study area along CA, OR, and WA, including basins with perennial snow and glaciers [@pelto2008]. Base flow peaks earlier, in May, about five months after the precipitation maximum. Snowmelt remains important, but basin size and integrated flow paths buffer short-term variability, resulting in lower inter-annual variability during peak months.
 
 Cluster 3 (Snowy, Responsive Headwaters) also peaks in June but differs from Cluster 1 in showing a stronger positive association between temperature and base flow, consistent with more immediate snowmelt responses during warm periods. These basins are found throughout the Intermountain West where they may experience earlier onset of melt or mid-winter melt events, leading to sustained base flow through early summer and moderate-to-high interannual variability in late spring.
 
@@ -188,7 +188,7 @@ Across all clusters, precipitation peaks in December, contributing roughly 15–
 
 #### Climate-Base Flow Relationship
 
-When the mixed-effects model was analyzed across all sites [@tbl-mixed-effect_all-site], it revealed that antecedent wetness was the most consistently positive and influential driver of base flow across the study region. This supports the role of cumulative recharge and basin memory in sustaining flows, particularly during dry-season months. In contrast, snow precipitation had a strong negative contemporaneous effect in all clusters, consistent with winter accumulation storing water in the snowpack and delaying its release to streams. Mean temperature showed an overall negative association with base flow, suggesting that warmer conditions correspond to seasonal drying, likely through enhanced evapotranspiration or reduced soil moisture. Monthly precipitation had a generally weak to negative effect, with the strongest suppression in arid or monsoon-influenced basins.
+When the mixed-effects model was analyzed across all sites [@tbl-mixed-effect_all-site], it revealed that antecedent moisture was the most consistently positive and influential driver of base flow across the study region. This supports the role of cumulative recharge and basin memory in sustaining flows, particularly during dry-season months. In contrast, snow precipitation had a strong negative contemporaneous effect in all clusters, consistent with winter accumulation storing water in the snowpack and delaying its release to streams. Mean temperature showed an overall negative association with base flow, suggesting that warmer conditions correspond to seasonal drying, likely through enhanced evapotranspiration or reduced soil moisture. Monthly precipitation had a generally weak to negative effect, with the strongest suppression in arid or monsoon-influenced basins.
 
 |      Predictor      | Estimate | Std. Error | t-value | Significance |
 |:-------------------:|:--------:|:----------:|:-------:|:------------:|
@@ -202,7 +202,7 @@ When the mixed-effects model was analyzed across all sites [@tbl-mixed-effect_al
 
 : Mixed-effects model results for climate and static predictors of monthly base flow across all study basins. Estimates represent fixed effects on log-transformed base flow, with positive coefficients indicating a positive association and negative coefficients indicating a negative association. Significance codes: \*\*\* p \< 0.001; \*\* p \< 0.01; \* p \< 0.05; ns = not significant. {#tbl-mixed-effect_all-site}
 
-When the model was evaluated by hydroclimatic cluster (@tbl-mixed-effect_cluster), key differences in climate–base flow relationships emerged. Antecedent wetness remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the transitional period between accumulation and melt. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins may enhance routing of melt-water into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
+When the model was evaluated by hydroclimatic cluster (@tbl-mixed-effect_cluster), key differences in climate–base flow relationships emerged. Antecedent moisture remained strongly positive in all groups, with the largest effect in Cluster 4, indicating its particular importance in sustaining flows in water-limited environments. Snow suppression of base flow was strongest in Cluster 1, reflecting the storage-dominated snowmelt regime of steep mountain catchments. Temperature effects varied markedly: Cluster 3, comprising snow-responsive headwaters, was the only group with a positive temperature effect, consistent with warming-induced snowmelt boosting base flow during the transitional period between accumulation and melt. In contrast, Cluster 4 exhibited a strong negative temperature effect, suggesting enhanced evaporative losses or soil moisture depletion during warm periods. Terrain metrics were also important in certain regimes; elevation and relief had the strongest positive effects in Cluster 1, indicating that steep, high-relief basins may enhance routing of melt-water into groundwater and streams. Basin area had limited influence in most clusters but was strongly negative in Cluster 4, potentially reflecting inefficient runoff generation or storage losses in large, low-relief arid basins.
 
 |      Variable       | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
 |:-------------------:|:---------:|:---------:|:---------:|:---------:|
@@ -278,141 +278,51 @@ Projected base-flow anomalies show clear shifts in seasonal timing (@fig-monthly
 
 ## Discussion
 
-### Scenario Dependence & Climate seasonality
+### Overview of main findings
+
+The results of this study reveal consistent regional patterns of declining base flow across western U.S. headwaters, with the strongest reductions occurring in snow- and mixed-regime basins and more moderate declines in arid and transitional systems. These trends reflect both a long-term downward trajectory in annual base flow and a shift toward earlier seasonal contributions, which is consistent with observed warming and snowpack loss throughout the region (CITE). Relative base-flow reductions in Cluster 2 align with previous findings from the Pacific Northwest, where declining low-flow quantiles have been attributed to temperature-driven decreases in snowpack and late-season recharge [@luce2009]. Across clusters, base flow is most sensitive to antecedent moisture and snow contributions, echoing nationwide patterns identified by @ayers_role_2022. Looking forward, LSTM projections indicate continued annual declines culminating in 45–65% reductions by late century under both SSP2-4.5 and SSP5-8.5 scenarios. Together, these findings provide a regionally consistent, climate–based synthesis of base-flow behavior across western U.S. headwaters, building on recent calls to integrate diverse headwater systems into coherent regional frameworks [@golden_advancing_2025; @beck_global_2013].
+
+### Historical base-flow changes and climate drivers
+
+Observed historical declines in base flow across western U.S. headwaters reflect a combination of warming-driven snowpack loss, earlier snowmelt, and increasing evaporative demand. Our results show reductions in late-summer and early-autumn base flow (@fig-hist_trends_monthly), consistent with widespread evidence of hydrologic timing shifts over the past half century. These patterns are consistent with observed and projected trends toward warmer winters, rain-on-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018]. @stewart2005 documented regional advances of spring snowmelt and streamflow by 1–4 weeks across western North America, driven primarily by rising winter and spring temperatures. Similarly, @mote_etal18 found that over 90% of long-term snow monitoring sites in the western U.S. show declining snow water equivalent, with the greatest losses occurring in transitional snow regimes typical of the PNW. These findings align with the patterns we observe in snow-dominated and mixed-regime clusters (Clusters 1-3), where reduced snowpack storage and earlier melt have translated into diminished groundwater recharge and shortened base-flow duration.
+
+The link between reduced snow storage and declining summer flow has been widely recognized in mountain systems [@tague_groundwater_2009; @safeeq2013]. In our analysis, the strongest base-flow declines occurred in clusters with large snowmelt contributions and steep topographic gradients (@tbl-bf-trend_cluster), regions where snow loss directly limits recharge. @tague_groundwater_2009 found that in the Cascades range in Oregon, summer streamflow declines were four times greater that in fast-draining basins, emphasizing how subsurface storage capacity controls the sensitivity of base flow to warming. Our results echo this relationship: catchments with greater storage or higher antecedent moisture exhibit smaller declines, suggesting that storage buffers can offset some climatic drying.
+
+Antecedent moisture emerged as the dominant positive predictor of base flow in our mixed-effects models, highlighting the importance of soil–groundwater storage in sustaining streamflow between storm events. Similar results were reported by @ayers_projected_2021 and @ayers_role_2022, which identified antecedent moisture as the most consistent driver of base-flow variability across the conterminous U.S. These findings emphasize that even in warming climates, multiseasonal storage integration can maintain low flows when recharge is insufficient. In some regions, this effect may counterbalance drying trends. For example, @douglas2000 suggests that increased rainfall, in place of snow, can enhance shallow groundwater storage, potentially raising low flows even as high flows decline. This mechanism may explain the modest increases we observed in winter base flow in some transitional basins.
+
+Conversely, the combined effects of warming and rising evapotranspiration (ET) are likely accelerating groundwater depletion and constraining recharge, particularly in non-snowmelt-dominated systems. @condon_evapotranspiration_2020 demonstrated that increased ET under warming leads to net groundwater loss across the contiguous U.S., even in regions with stable precipitation. In our study, these dynamics are evident in Cluster 4, where elevated temperatures coincide with persistently low base-flow fractions. These responses emphasize the role of water balance partitioning to determine the direction, magnitude, and leading caue of base-flow change across regimes.
+
+Taken together, these results illustrate the regime-dependent nature of base-flow responses to climate forcing. Snow-dominated systems show the largest relative declines, consistent with reduced snowpack and earlier melt [@stewart2005; @mote_etal18]. Mixed regimes exhibit middling declines, reflecting both snow loss and modest recharge from rainfall. Non-snowmelt-dominated basins remain most limited by storage and precipitation frequency, with warming-driven ET likely outweighing the potential of rainfall gains. These findings align with the broader understanding of hydrologic partitioning in the critical zone where catchments with greater subsurface permeability and snow-derived recharge maintain higher base-flow indices and reduced sensitivity to seasonal drying [@wlostowski2021]. Our regional synthesis thus reinforces that the sensitivity of base flow to climate is mediated by both the magnitude and timing of water inputs and by the storage characteristics that regulate basin streamflow.
+
+### Spatial heterogeneity and cluster-based insights
+
+We developed a set of base-flow-specific clusters following the principles outlined by @olden_framework_2012, classifying basins based on data-driven hydrologic and climate attributes tailored to groundwater-surface water interactions rather than pre-defined regions. Regional hydroclimatic clustering provides a powerful framework for interpreting base-flow variability across diverse headwater systems. This method minimizes within-group variability (including differences in elevation, snowmelt timing, and precipitation regime) while maximizing between-group contrast. Similar to the hydro-region framework of @dethier2020, our cluster-based method allows for the identification of regionally consistent signals in base-flow behavior and climate response. This methodology supports the idea that hydrologic similarity can be identified empirically through shared climatic and physiographic attributes, as emphasized by @wagener2007 and @beck2020.
+
+Differences among clusters reveal distinct climate–base-flow relationships driven by regional water balance controls. In snow-dominated systems (Cluster 1, 3), snow precipitation and melt timing govern interannual variability, while in transitional and mixed regimes (Cluster 2), the balance between rainfall and antecedent moisture determines the persistence of base flow. Arid clusters (Cluster 4) are most sensitive to temperature-driven evapotranspiration and storage limitation, showing weak climatic elasticity and minimal recovery following droughts. These contrasting responses mirror the spatial structure of recharge and storage capacity across the western U.S. and show how hydrologic regimes operate along a spectrum from energy- to water-limited systems. Importantly, the clustering approach offers a scalable framework for regional hydrologic modeling, enabling data-driven models, such as LSTMs, to learn regime-specific dynamics more effectively \[@kratzert_neuralhydrology_2019; @lees2022. In doing so, this framework advances the integrative understanding of headwater behavior across space and time suggested by @golden_advancing_2025 and provides a path towards multi-regime hydrologic synthesis.
+
+### Future baseflow trajectories and implications for water resources
+
+Our projections indicate substantial, continued base-flow declines of roughly 45–65% by late century depending on SSP2-4.5 and SSP5-8.5 scenarios, along with earlier seasonal peaks and shorter summer flow duration. The greatest relative declines occur in snow-dominated basins and monsoon-influenced basins (Clusters 3, 4), while mixed regimes experience the largest total losses (Cluster 2). These trends align with broader projections of warming, drying, and increased drought frequency across the western United States [@diffenbaugh2015].
+
+Earlier base-flow timing and reduced late-season flow may have important consequences for aquatic ecosystems and downstream water supply reliability. For water management, these shifts suggest that existing reservoir operations and drought plans, which are often based on historical flow timing (CITE), may become less effective. Increasingly variable and intermittent flow regimes could make it more difficult to meet environmental flow needs and sustain base-flow-dependent systems [@hammond2021].
 
 Direct comparisons between SSP2-4.5 and SSP5-8.5 emphasize how emissions pathways amplify base-flow declines. Although anomalies under both scenarios overlap through mid-century, divergence becomes more evident after \~2060. By late-century, basins under SSP5-8.5 are projected to experience 10–20% larger declines relative to SSP2-4.5 (@fig-annualized_anomaly), with the gap particularly pronounced in snowmelt-dominated regions (@fig-monthly-anomaly_period). These contrasts underscore the long-term importance of emissions mitigation in reducing the magnitude of base-flow losses across western headwaters.
 
-### Seasonal retiming and hydroclimate regime diffs
+While some uncertainty remains due to model structure, climate forcing, and the nonstationary nature of hydrologic systems [@milly2008], the direction of change is consistent across scenarios and clusters. The integration of statistical trend analysis with cluster-specific LSTM models captures both linear sensitivities and nonlinear climate–hydrology interactions [@kratzert_neuralhydrology_2019], providing a more complete picture of how groundwater-supported flow may evolve under future warming. Continued efforts to couple machine learning with process-based understanding and to expand headwater monitoring networks will be essential for improving projections and supporting climate-resilient water management.
 
-These patterns are consistent with observed and projected trends toward warmer winters, rain-on-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
+### Methodological advances and integration of statistical + machine learning approaches
 
-### Overview and synthesis of main findings
+By combining statistical and machine learning approaches, this study bridges historical interpretation with predictive modeling to better understand base-flow dynamics across diverse hydroclimatic regimes. Statistical models provide interpretable estimates of long-term change and quantify the strength of climatic drivers, aligning with similar approaches in previous studies linking base flow to precipitation, temperature, and snow metrics [@ayers_role_2022; @murray_impact_2023]. However, these linear models are limited in their ability to capture the nonlinear, lagged feedbacks that characterize groundwater–surface water interactions. Integrating LSTM neural networks addressed this gap, allowing the detection of complex, time-dependent relationships between climate inputs and base-flow responses that vary seasonally and across clusters.
 
--   Summarize regional base-flow trends (historical decline, seasonal shifts).
+Across hydroclimatic clusters, the LSTM models successfully captured both the magnitude and variability headwater base flow. In particular, the models accurately reproduced seasonal lags between climate forcings and streamflow response. Model performance was strongest in snow- and mixed-regime basins where long-term climate signals are more coherent, while arid clusters exhibited higher uncertainty due to more variation in low-flows and weaker climate–base-flow relationships. These factors highlight the importance of dataset length, cluster representativeness, and model transferability when applying deep learning to hydrologic prediction. Even so, the hybrid framework demonstrated how process-informed statistical analyses and data-driven models can complement one another with statistical methods identifying dominant drivers and LSTMs modeling their nonlinear integration. This approach attempts to answer recent calls for *process-based machine learning* [@shen2023; @nearing2021] and contributes to emerging efforts to combine empirical studies, physical understanding, and regional synthesis in hydrologic science [@kratzert_neuralhydrology_2019; @golden_advancing_2025].
 
--   Note differences among clusters (e.g., snow-dominated vs. arid).
+### Implications and future directions
 
--   Highlight LSTM projections showing continued decline and earlier seasonal peaks.
+Our projections rely on CESM2 from the WUS-D3 dataset, as it is the only GCM with full coverage for both SSP2-4.5 and SSP5-8.5 in this region-specific dataset. Using a single model ensures internal consistency between scenarios but narrows the range of climate uncertainty represented. Future work should incorporate multi-GCM ensembles to assess the robustness of projected declines and to quantify scenario and model spread.
 
--   Frame as the first regional, climate-projection-based synthesis for western U.S. headwaters.
+Our results point to heightened vulnerability of groundwater-supported flow under continued aridification, with the greatest risks during late summer and early autumn when ecological needs and human demands converge. Protecting and managing headwaters, where groundwater–surface water exchange sustains downstream supply, will require strategies that prioritize aquatic refugia, riparian and meadow restoration, and recharge-enhancing practices. This is in line with recent calls to elevate headwaters in conservation and policy frameworks [@golden_advancing_2025; @mcdonnell2007; @creed2017]. Growing non-perennial segments and increased intermitent flow emphasize the need to integrate headwater systems into regional water-management planning, including environmental flow targets that explicitly account for declining base flow and earlier seasonal timing [@datry2014].
 
-Supporting papers:
-
--   Luce & Holden (2009), WRR – “Declining annual streamflow distributions in the Pacific Northwest.”
-
--   Ayers et al. (2022), J. Hydrol. – “Climate drivers of baseflow in U.S. streams: role of antecedent moisture and snow.”
-
--   Beck et al. (2013), JGR-Atmospheres – “Global baseflow index mapping using machine learning.”
-
--   Golden et al. (2025), Nature Water – for conceptual framing (importance of synthesis across scales).
-
-2.  Historical baseflow changes and climate drivers
-
-Purpose: Interpret observed historical patterns in context of known hydroclimatic processes. Content:
-
--   Discuss link between warming, snowpack loss, and reduced summer baseflow.
-
--   Compare to prior findings on snowmelt timing, recharge decline, and ET rise.
-
--   Highlight that antecedent moisture emerged as dominant positive driver (consistent with soil–groundwater coupling literature).
-
--   Emphasize regime-dependent responses: snow vs. mixed vs. arid.
-
-Supporting papers:
-
--   Stewart et al. (2004), J. Climate – “Changes in snowmelt runoff timing.”
-
--   Mote et al. (2018), NPJ Climate and Atmospheric Science – “Declining mountain snowpack in western North America.”
-
--   Tague & Grant (2009), Water Resour. Res. – “Groundwater dynamics in forested mountain catchments.”
-
--   Ayers et al. (2019, 2022), J. Hydrol. – links between climate variability and baseflow.
-
--   Wlostowski et al. (2021), WRR – “Signatures of hydrologic function across the critical zone observatory network.”
-
-3.  Spatial heterogeneity and cluster-based insights
-
--   Purpose: Emphasize novelty of your hydroclimatic clusters and interpret regime-specific differences.
-
--   Explain how clustering revealed coherent hydroclimatic behavior not visible in aggregated analyses.
-
--   Compare dominant drivers across regimes (e.g., snow precipitation importance in Cluster 1 vs. antecedent moisture in Cluster 4).
-
--   Discuss how clustering aligns with physical hydroclimate zones (e.g., Basin & Range vs. Colorado Plateau).
-
--   Highlight the value of this framework for scaling hydrologic models across regions (addresses Golden et al. 2025’s “integration” call).
-
-Supporting papers:
-
--   Beck et al. (2020), JGR-Atmospheres – “Distributed parameter regionalization using 4,229 headwater catchments.”
-
--   Kratzert et al. (2019), HESS – “Regional hydrological behaviors via LSTM applied to large-sample datasets.”
-
--   Wagener et al. (2007), Geogr. Compass – “Catchment classification and hydrologic similarity.”
-
--   Lees et al. (2022), Water Resour. Res. – “Benchmarking LSTMs against process models for streamflow prediction.”
-
-Golden et al. (2025), Nature Water – conceptual support for multi-regime synthesis.
-
-4.  Future baseflow trajectories and implications for water resources
-
--   Discuss magnitude and direction of future declines under SSP2-4.5 and SSP5-8.5.
-
--   Note earlier seasonal peaks, reduced summer persistence — implications for ecological flow maintenance, reservoir operations, and drought resilience.
-
--   Highlight consistency with regional drying projections and hydroclimate model ensembles.
-
--   Emphasize uncertainty bounds (model spread, input climate data, hydrologic nonstationarity).
-
-Supporting papers:
-
--   Rupp et al. (2021), WRR – “Changing river network synchrony modulates projected increases in high flows.”
-
--   Milly et al. (2008), Science – “Stationarity is dead.”
-
--   Hammond et al. (2021), GRL – “Spatial patterns and drivers of non-perennial flow regimes in the contiguous U.S.”
-
--   Diffenbaugh et al. (2015), PNAS – “Anthropogenic warming and increasing drought risk in the western U.S.”
-
--   Kratzert et al. (2019), HESS – for deep learning hydrologic projections.
-
-5.  Methodological advances and integration of statistical + machine learning approaches
-
--   Purpose: Reflect on how combining methods strengthened insights.
-
--   Statistical models provided interpretable, historical relationships; LSTM models captured nonlinear, lagged dynamics.
-
--   Discuss performance across clusters (e.g., LSTM capturing seasonal hysteresis).
-
--   Note limitations: data length, cluster representativeness, model transferability.
-
--   Suggest that hybrid frameworks can link mechanistic and data-driven understanding, echoing calls for “process-guided ML” (Shen et al., 2021).
-
-Supporting papers:
-
--   Shen et al. (2021), Frontiers in Water – “Broadening the use of machine learning in hydrology.”
-
--   Nearing et al. (2021), WRR – “What role does hydrologic science play in the age of ML?”
-
--   Kratzert et al. (2019, 2022), HESS – LSTM hydrologic modeling framework.
-
--   Golden et al. (2025), Nature Water – on integrating modeling and synthesis.
-
-6.  Implications and future directions
-
-All projections were based on the CESM2 model from the WUS-D3 dataset, as it was the only GCM with complete coverage for both SSP2-4.5 and SSP5-8.5. Using a single GCM does ensure internal consistency between scenarios but constrains the representation of climate uncertainty. Future analyses incorporating multiple GCMs could help assess the robustness of these projected base-flow changes.
-
--   Emphasize vulnerability of groundwater-supported flow under projected aridification.
--   Discuss implications for headwater protection, restoration, and monitoring (link back to Golden et al. 2025).
--   Advocate for integrating headwater networks into regional water management planning.
--   Highlight research needs:
-    -   Expand gauge and sensor networks in non-perennial headwaters.
-    -   Couple LSTM and process-based models for hybrid prediction.
-    -   Extend cluster-based frameworks to other mountain regions globally. Supporting papers:
--   Golden et al. (2025), Nature Water – synthesis on headwater protection.
--   Creed et al. (2017), Nat. Geosci. – “Enhancing protection for vulnerable waters.”
--   Lane et al. (2023), Ecosystems – “Vulnerable waters are essential to watershed resilience.”
--   Datry et al. (2023), Nat. Rev. Earth Environ. – “Non-perennial segments in river networks.”
+Future work should prioritize reducing uncertainty and improving the decision-making relevance of base-flow projections. Expanding monitoring in data-sparse regions, especially in non-perennial reaches and headwater catchments, will be critical for capturing emerging hydrologic change. The hybrid modeling framework used here, which couples LSTM models (to capture nonlinear, lagged responses) with process-based or statistical models, can improve model transferability across regimes and can help bridge knowledge gaps in the near term. To better constrain possible climate futures, future analyzes should draw on multi-model climate ensembles that capture a broader range of warming and precipitation trajectories. The cluster-based framework presented in this study provides a scalable way to generalize climate–streamflow relationships and to translate insights between site-level and regional scales. Together, these steps can strengthen the connection between scientific knowledge and water management, by putting forth a headwater-focused approach to climate resilience that recognizes base flow as a key indicator of groundwater-surface water connectivity, watershed health, and water-supply reliability.
 
 ## Conclusions
 
@@ -420,7 +330,7 @@ This study analyzed base-flow trends and seasonality across western U.S. headwat
 
 The four hydroclimatic clusters highlight meaningful contrasts in both historical base-flow behavior and climate sensitivity. Clusters 1 and 3 are both snowmelt-dominated but differ in how temperature affects flow. Cluster 1 shows pronounced snow suppression and a weakly negative temperature effect, reflecting delayed melt and storage-dominated runoff. In contrast, Cluster 3 exhibits a positive temperature effect, consistent with enhanced snowmelt contributions to base flow during transitional warming periods. Cluster 2 exhibits the smallest projected declines, likely reflecting the buffering influence of perennial snow and glacier melt in the Cascade Range. In contrast, Cluster 4 is characterized by low and highly variable base flow, dominated by short recharge events and strong evaporative losses typical of arid and monsoon-driven systems. Together, these distinctions highlight how physiographic and climatic setting shape base-flow resilience and provide a meaningful framework for interpreting spatial and cluster-wise hydrologic change.
 
-Antecedent wetness was consistently the most positive driver of base flow, emphasizing that cumulative recharge is key in sustaining groundwater-supported streamflow. Snow precipitation had strong negative effects, while temperature and precipitation effects varied by regime with positive effects in snow-responsive basins and negative effects in arid basins. Future projections indicate continued declines in base flow across all clusters, with regional reductions of between 45–65% by late century depending on climate scenario. Although early-century changes are similar across scenarios, stronger declines and greater variability emerge after mid-century under higher emissions.
+Antecedent moisture was consistently the most positive driver of base flow, emphasizing that cumulative recharge is key in sustaining groundwater-supported streamflow. Snow precipitation had strong negative effects, while temperature and precipitation effects varied by regime with positive effects in snow-responsive basins and negative effects in arid basins. Future projections indicate continued declines in base flow across all clusters, with regional reductions of between 45–65% by late century depending on climate scenario. Although early-century changes are similar across scenarios, stronger declines and greater variability emerge after mid-century under higher emissions.
 
 Overall, these results show that base flow in western headwaters is highly sensitive to both temperature-driven hydrologic shifts and long-term wetness conditions. Earlier runoff timing and reduced summer flows will likely worsen late-season water scarcity, ecosystem stress, and wildfire risk. By combining statistical and machine-learning approaches, this work offers a framework for identifying climate-sensitive hydrologic regimes and improving regional water management under a warming climate.
 

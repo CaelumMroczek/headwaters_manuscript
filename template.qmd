@@ -82,11 +82,11 @@ Together, these approaches enable a regional modelling framework to quantify bas
 
 ### Data
 
-Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western United States (FIG - STUDY AREA). Streamflow records were downloaded from the USGS National Water Information System for the period of water years 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km². This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability.
+Daily mean discharge data were obtained for 115 U.S. Geological Survey (USGS) streamgages located across the eleven western states [@fig-cluster-map]. Streamflow records were downloaded from the USGS National Water Information System for the period of water years 1950–2024 [@geological_survey_us_national_2025]. Sites were selected to have \> 90% daily data completeness, with no gaps exceeding three consecutive years, and to have catchments located entirely within U.S. borders to avoid data restrictions. This period of record provides sufficient length to detect long-term trends and hydrologic regime shifts and encompasses three phases of the Pacific Decadal Oscillation [@newman_pacific_2016], reducing the likelihood that results are biased by decadal climate variability. Sites with a dam on the main stem, as reported in the National Inventory of Dams [@usarmycorpsofengineers_NID], were excluded to reduce the influence of direct flow regulation. Drainage areas ranged from 4 to 21,167 km², with a mean of 1,524 km² and a median of 558 km².
 
-FIG - STUDY AREA
+![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
 
-Headwaters have been operational defined as streams with Strahler stream order 1 or 2 [@golden_advancing_2025; @freeman_hydrologic_2007; @imberger_headwater_2023]. It's been found that large-scale stream network datasets may underestimate the extent of localized headwater reaches [@brinkerhoff_importance_2024], indicating that these delineated headwater streams likely represent a minimum bound on actual headwater extent. To overcome this deficiency in this study, streamgages located on streams of order 1 to 3 were included to capture the cumulative processes of headwater systems. By focusing on headwater systems, we overcome issues of scale that arise from the coarse resolution of national and global models and from the limited availability of catchments with adequate monitoring for both streamflow and climate variables.
+Headwaters have been operational defined as streams with Strahler stream order 1 or 2 [@golden_advancing_2025; @freeman_hydrologic_2007; @imberger_headwater_2023]. It's been found that large-scale stream network datasets may underestimate the extent of localized headwater reaches [@brinkerhoff_importance_2024], indicating that these delineated headwater streams likely represent a minimum bound on actual headwater extent. To overcome this deficiency, in this study, streamgages located on streams of order 1 to 3 were included to capture the cumulative processes of headwater systems. By focusing on headwater systems, we overcome issues of scale that arise from the coarse resolution of national and global models and from the limited availability of catchments with adequate monitoring for both streamflow and climate variables.
 
 Basin boundaries were delineated using the Hydro Network-Linked Data Index from the National Hydrography Dataset [@geological_survey_us_national_2025]. Across the western United States, headwater systems, as defined above, constitute 88.15% of total river length. To assess the representativeness of study sites, their distribution was compared to the full headwater network across the western United States using Köppen climate classifications and the U.S. Forest Service Watershed Condition Framework. All seven major (two-letter) Köppen climate classes present in the region are represented in the study dataset [@peel_updated_2007]. Approximately 90 percent of study basins contained U.S. Forest Service lands, consistent with findings that most western water originates in forested areas [@brown]. Across the region, 49.1 percent of forested headwater catchments are considered at risk, defined as Functioning at Risk or Impaired Function, the study basins represent this well with 48.5 percent of forested catchment areas falling into these categories.
 
@@ -162,8 +162,6 @@ For model evaluation, we validated each cluster-specific LSTM model against clim
 ### Hydroclimate Clustering
 
 The k-means clustering identified four distinct hydroclimatic groups among the 115 study basins, reflecting differences in elevation, relief, basin size, climate regime, and base-flow response characteristics. These clusters capture gradients in snow influence, seasonal precipitation patterns, and base-flow variability across the western United States. Two clusters (1 and 3) are primarily high-elevation, snow-influenced headwaters but differ in their sensitivity to temperature and snowpack persistence. Cluster 2 contains the largest, mixed-regime basins with relatively stable base flow and Cluster 4 represents low-elevation, arid to monsoon-influenced basins with the lowest base flow and highest interannual variability. Descriptive statistics for each cluster, including key climate, physiographic, and base-flow metrics, are provided in @tbl-cluster-summary, and the spatial distribution of clusters across the study area is shown in @fig-cluster-map.
-
-![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
 
 | Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Monthly Base Flow Mean (cfs) | Base Flow CV |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -280,8 +278,6 @@ Projected base-flow anomalies show clear shifts in seasonal timing (@fig-monthly
 
 ## Discussion
 
-### Historical Context and mechanisms
-
 ### Scenario Dependence & Climate seasonality
 
 Direct comparisons between SSP2-4.5 and SSP5-8.5 emphasize how emissions pathways amplify base-flow declines. Although anomalies under both scenarios overlap through mid-century, divergence becomes more evident after \~2060. By late-century, basins under SSP5-8.5 are projected to experience 10–20% larger declines relative to SSP2-4.5 (@fig-annualized_anomaly), with the gap particularly pronounced in snowmelt-dominated regions (@fig-monthly-anomaly_period). These contrasts underscore the long-term importance of emissions mitigation in reducing the magnitude of base-flow losses across western headwaters.
@@ -290,11 +286,133 @@ Direct comparisons between SSP2-4.5 and SSP5-8.5 emphasize how emissions pathway
 
 These patterns are consistent with observed and projected trends toward warmer winters, rain-on-snow events, and earlier peak flows in snow-dominated basins [@musselman_projected_2018].
 
-### Implications for water resources
+### Overview and synthesis of main findings
 
-### Method considerations/limitations
+-   Summarize regional base-flow trends (historical decline, seasonal shifts).
 
-### Broad strokes - future work
+-   Note differences among clusters (e.g., snow-dominated vs. arid).
+
+-   Highlight LSTM projections showing continued decline and earlier seasonal peaks.
+
+-   Frame as the first regional, climate-projection-based synthesis for western U.S. headwaters.
+
+Supporting papers:
+
+-   Luce & Holden (2009), WRR – “Declining annual streamflow distributions in the Pacific Northwest.”
+
+-   Ayers et al. (2022), J. Hydrol. – “Climate drivers of baseflow in U.S. streams: role of antecedent moisture and snow.”
+
+-   Beck et al. (2013), JGR-Atmospheres – “Global baseflow index mapping using machine learning.”
+
+-   Golden et al. (2025), Nature Water – for conceptual framing (importance of synthesis across scales).
+
+2.  Historical baseflow changes and climate drivers
+
+Purpose: Interpret observed historical patterns in context of known hydroclimatic processes. Content:
+
+-   Discuss link between warming, snowpack loss, and reduced summer baseflow.
+
+-   Compare to prior findings on snowmelt timing, recharge decline, and ET rise.
+
+-   Highlight that antecedent moisture emerged as dominant positive driver (consistent with soil–groundwater coupling literature).
+
+-   Emphasize regime-dependent responses: snow vs. mixed vs. arid.
+
+Supporting papers:
+
+-   Stewart et al. (2004), J. Climate – “Changes in snowmelt runoff timing.”
+
+-   Mote et al. (2018), NPJ Climate and Atmospheric Science – “Declining mountain snowpack in western North America.”
+
+-   Tague & Grant (2009), Water Resour. Res. – “Groundwater dynamics in forested mountain catchments.”
+
+-   Ayers et al. (2019, 2022), J. Hydrol. – links between climate variability and baseflow.
+
+-   Wlostowski et al. (2021), WRR – “Signatures of hydrologic function across the critical zone observatory network.”
+
+3.  Spatial heterogeneity and cluster-based insights
+
+-   Purpose: Emphasize novelty of your hydroclimatic clusters and interpret regime-specific differences.
+
+-   Explain how clustering revealed coherent hydroclimatic behavior not visible in aggregated analyses.
+
+-   Compare dominant drivers across regimes (e.g., snow precipitation importance in Cluster 1 vs. antecedent moisture in Cluster 4).
+
+-   Discuss how clustering aligns with physical hydroclimate zones (e.g., Basin & Range vs. Colorado Plateau).
+
+-   Highlight the value of this framework for scaling hydrologic models across regions (addresses Golden et al. 2025’s “integration” call).
+
+Supporting papers:
+
+-   Beck et al. (2020), JGR-Atmospheres – “Distributed parameter regionalization using 4,229 headwater catchments.”
+
+-   Kratzert et al. (2019), HESS – “Regional hydrological behaviors via LSTM applied to large-sample datasets.”
+
+-   Wagener et al. (2007), Geogr. Compass – “Catchment classification and hydrologic similarity.”
+
+-   Lees et al. (2022), Water Resour. Res. – “Benchmarking LSTMs against process models for streamflow prediction.”
+
+Golden et al. (2025), Nature Water – conceptual support for multi-regime synthesis.
+
+4.  Future baseflow trajectories and implications for water resources
+
+-   Discuss magnitude and direction of future declines under SSP2-4.5 and SSP5-8.5.
+
+-   Note earlier seasonal peaks, reduced summer persistence — implications for ecological flow maintenance, reservoir operations, and drought resilience.
+
+-   Highlight consistency with regional drying projections and hydroclimate model ensembles.
+
+-   Emphasize uncertainty bounds (model spread, input climate data, hydrologic nonstationarity).
+
+Supporting papers:
+
+-   Rupp et al. (2021), WRR – “Changing river network synchrony modulates projected increases in high flows.”
+
+-   Milly et al. (2008), Science – “Stationarity is dead.”
+
+-   Hammond et al. (2021), GRL – “Spatial patterns and drivers of non-perennial flow regimes in the contiguous U.S.”
+
+-   Diffenbaugh et al. (2015), PNAS – “Anthropogenic warming and increasing drought risk in the western U.S.”
+
+-   Kratzert et al. (2019), HESS – for deep learning hydrologic projections.
+
+5.  Methodological advances and integration of statistical + machine learning approaches
+
+-   Purpose: Reflect on how combining methods strengthened insights.
+
+-   Statistical models provided interpretable, historical relationships; LSTM models captured nonlinear, lagged dynamics.
+
+-   Discuss performance across clusters (e.g., LSTM capturing seasonal hysteresis).
+
+-   Note limitations: data length, cluster representativeness, model transferability.
+
+-   Suggest that hybrid frameworks can link mechanistic and data-driven understanding, echoing calls for “process-guided ML” (Shen et al., 2021).
+
+Supporting papers:
+
+-   Shen et al. (2021), Frontiers in Water – “Broadening the use of machine learning in hydrology.”
+
+-   Nearing et al. (2021), WRR – “What role does hydrologic science play in the age of ML?”
+
+-   Kratzert et al. (2019, 2022), HESS – LSTM hydrologic modeling framework.
+
+-   Golden et al. (2025), Nature Water – on integrating modeling and synthesis.
+
+6.  Implications and future directions
+
+All projections were based on the CESM2 model from the WUS-D3 dataset, as it was the only GCM with complete coverage for both SSP2-4.5 and SSP5-8.5. Using a single GCM does ensure internal consistency between scenarios but constrains the representation of climate uncertainty. Future analyses incorporating multiple GCMs could help assess the robustness of these projected base-flow changes.
+
+-   Emphasize vulnerability of groundwater-supported flow under projected aridification.
+-   Discuss implications for headwater protection, restoration, and monitoring (link back to Golden et al. 2025).
+-   Advocate for integrating headwater networks into regional water management planning.
+-   Highlight research needs:
+    -   Expand gauge and sensor networks in non-perennial headwaters.
+    -   Couple LSTM and process-based models for hybrid prediction.
+    -   Extend cluster-based frameworks to other mountain regions globally. Supporting papers:
+-   Golden et al. (2025), Nature Water – synthesis on headwater protection.
+-   Creed et al. (2017), Nat. Geosci. – “Enhancing protection for vulnerable waters.”
+-   Lane et al. (2023), Ecosystems – “Vulnerable waters are essential to watershed resilience.”
+-   Datry et al. (2023), Nat. Rev. Earth Environ. – “Non-perennial segments in river networks.”
 
 ## Conclusions
 

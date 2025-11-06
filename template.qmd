@@ -129,7 +129,7 @@ To capture monthly flow dynamics, the model was trained using overlapping 24-mon
 Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on minimizing cross-validated mean absolute error (MAE) during the 2006–2013 period (Table S1). Each model used a 12-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
 
 | **Data Type** | **Predictor** | **Description** |
-|-------------------|-------------------|----------------------------------|
+|----|----|----|
 | **Temperature** | `t2` | Mean monthly near-surface (2 m) air temperature (°C) |
 |  | `t2max` | Monthly maximum temperature (°C) |
 |  | `t2min` | Monthly minimum temperature (°C) |
@@ -166,7 +166,7 @@ The k-means clustering identified four distinct hydroclimatic groups among the 1
 ![Spatial distribution of study streamgages across the western United States, colored by hydroclimatic cluster. Clusters reflect differences in elevation, snow influence, base-flow magnitude, and seasonality. Basins were grouped using k-means clustering on long-term climate and physiographic attributes.](figs/cluster_map.png){#fig-cluster-map}
 
 | Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Monthly Base Flow Mean (cfs) | Base Flow CV |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 1 | 10 | 1193.3 | 2106 | 1930 | 107.48 | 5.51 | 4765 | 1.37 |
 | 2 | 17 | 4452.2 | 1266 | 2825 | 200.78 | 5.74 | 51840 | 0.74 |
 | 3 | 50 | 1124.8 | 2330 | 1772 | 85.69 | 3.97 | 4357 | 1.30 |
@@ -225,7 +225,7 @@ Together, these results highlight that while antecedent moisture is a dominant c
 Across the four hydroclimatic clusters, long-term, historical base-flow trends (1950-2024) varied in both magnitude and seasonal timing (@tbl-bf-trend_cluster; @fig-hist_trends_monthly). The most widespread declines occurred in early summer, especially in June and July, consistent with reductions in snowmelt-driven base flow. Historical rates in @tbl-bf-trend_cluster are continuous Theil-Sen slopes (trend per decade) rather than baseline-referenced anomalies, and are thus not expressed in the same units as projected annual change (Section 3.3). Modest increases were observed in winter and early spring months, particularly January and March in Cluster 1 and March–April in Cluster 3. Cluster 1 showed a mix of increases in colder months and decreases in summer, resulting in a small overall positive annual trend. Cluster 2 exhibited consistent and large negative trends across nearly all months, with the strongest declines in February, June, and December. Clusters 3 and 4 showed modest negative trends overall, with variability in both direction and timing depending on the month. These patterns highlight seasonal shifts in base flow that differ across hydroclimatic regimes.
 
 | Cluster | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec | Median Trend | Pct. Sig. Up | Pct. Sig. Down |
-|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 1 | 1.22 | 0.38 | 5.60 | 3.92 | 0.50 | -1.31 | -1.71 | 0.08 | -3.22 | -0.64 | 3.14 | 1.10 | 0.44 | 20.69 | 16.38 |
 | 2 | -0.39 | -3.75 | -0.24 | -1.28 | -1.63 | -3.54 | -3.71 | -2.79 | -3.04 | -2.59 | -1.10 | -2.31 | -2.45 | 1.47 | 30.39 |
 | 3 | -0.61 | -0.95 | 1.12 | 1.12 | 0.04 | -2.33 | -3.10 | -3.26 | -2.25 | -0.92 | -0.77 | -1.81 | -0.94 | 8.60 | 17.37 |

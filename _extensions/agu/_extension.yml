@@ -31,3 +31,11 @@ contributes:
         - trackchanges.sty
     html:
       toc: true
+    word:
+      toc: true
+      header-includes: |
+        - \usepackage[table]{xcolor}
+        - \definecolor{c1}{HTML}{4CAF50}
+        - \definecolor{c2}{HTML}{F44336}
+        - \definecolor{c3}{HTML}{FFC107}
+        - \definecolor{c4}{HTML}{2196F3}

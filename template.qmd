@@ -239,22 +239,22 @@ These results highlight that while antecedent moisture is a dominant control on 
 
 Across the four hydroclimatic clusters, long-term, historical base-flow trends (1950-2024) varied in both magnitude and seasonal timing (@tbl-bf-trend_cluster; @fig-hist_trends_monthly). The most widespread declines occurred in early summer, especially in June and July, consistent with reductions in snowmelt-driven base flow. Historical rates in @tbl-bf-trend_cluster are continuous Theil-Sen slopes (trend per decade) rather than baseline-referenced anomalies, and are thus not expressed in the same units as projected annual change (Section 3.3). Modest increases were observed in winter and early spring months, particularly January and March in Cluster 1 and March–April in Cluster 3. Cluster 1 showed a mix of increases in colder months and decreases in summer, resulting in a small overall positive annual trend. Cluster 2 exhibited consistent and large negative trends across nearly all months, with the strongest declines in February, June, and December. Clusters 3 and 4 showed modest negative trends overall, with variability in both direction and timing depending on the month. These patterns highlight seasonal shifts in base flow that differ across hydroclimatic regimes.
 
-| Month | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
-|-------|-----------|-----------|-----------|-----------|
-| Jan | 1.22 | -0.39 | -0.61 | -0.13 |
-| Feb | 0.38 | -3.75 | -0.95 | -4.27 |
-| Mar | 5.60 | -0.24 | 1.12 | 0.32 |
-| Apr | 3.92 | -1.28 | 1.12 | 0.00 |
-| May | 0.50 | -1.63 | 0.04 | -0.11 |
-| Jun | -1.31 | -3.54 | -2.33 | -0.37 |
-| Jul | -1.71 | -3.71 | -3.10 | -1.92 |
-| Aug | 0.08 | -2.79 | -3.26 | -2.75 |
-| Sep | -3.22 | -3.04 | -2.25 | -3.54 |
-| Oct | -0.64 | -2.59 | -0.92 | -3.28 |
-| Nov | 3.14 | -1.10 | -0.77 | -0.88 |
-| Dec | 1.10 | -2.31 | -1.81 | -2.35 |
-| **Median Trend** | **0.44** | **-2.45** | **-0.94** | **-1.40** |
-| **Pct. Sig. Up** | **20.69** | **1.47** | **8.60** | **12.79** |
+| Month              | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 |
+|--------------------|-----------|-----------|-----------|-----------|
+| Jan                | 1.22      | -0.39     | -0.61     | -0.13     |
+| Feb                | 0.38      | -3.75     | -0.95     | -4.27     |
+| Mar                | 5.60      | -0.24     | 1.12      | 0.32      |
+| Apr                | 3.92      | -1.28     | 1.12      | 0.00      |
+| May                | 0.50      | -1.63     | 0.04      | -0.11     |
+| Jun                | -1.31     | -3.54     | -2.33     | -0.37     |
+| Jul                | -1.71     | -3.71     | -3.10     | -1.92     |
+| Aug                | 0.08      | -2.79     | -3.26     | -2.75     |
+| Sep                | -3.22     | -3.04     | -2.25     | -3.54     |
+| Oct                | -0.64     | -2.59     | -0.92     | -3.28     |
+| Nov                | 3.14      | -1.10     | -0.77     | -0.88     |
+| Dec                | 1.10      | -2.31     | -1.81     | -2.35     |
+| **Median Trend**   | **0.44**  | **-2.45** | **-0.94** | **-1.40** |
+| **Pct. Sig. Up**   | **20.69** | **1.47**  | **8.60**  | **12.79** |
 | **Pct. Sig. Down** | **16.38** | **30.39** | **17.37** | **18.84** |
 
 : Median monthly base-flow trends by hydroclimatic cluster for 1950–2024, shown as percent change **per decade** from Theil–Sen slope estimates. Positive values indicate increasing base flow; negative values indicate decreasing base flow. “Pct. Sig. Up” and “Pct. Sig. Down” show the percentage of sites with statistically significant (p \< 0.05) positive or negative trends. {#tbl-bf-trend_cluster}
@@ -340,6 +340,6 @@ This work was supported by the Arizona Board of Regents Technology and Research 
 
 ## Open Research Statement
 
-The streamflow data used in this study are publicly available from the U.S. Geological Survey National Water Information System (https://waterdata.usgs.gov/nwis). The WUS-D3 climate data can be accessed at https://doi.org/10.5194/gmd-17-2265-2024. Code and processed datasets used for analysis and modeling are archived at https://github.com/CaelumMroczek/Headwaters-WestUS. 
+The streamflow data used in this study are publicly available from the U.S. Geological Survey National Water Information System (<https://waterdata.usgs.gov/nwis>). The WUS-D3 climate data can be accessed at <https://doi.org/10.5194/gmd-17-2265-2024>. Code and processed datasets used for analysis and modeling are archived at <https://github.com/CaelumMroczek/Headwaters-WestUS>. 
 
 ## References {.unnumbered}

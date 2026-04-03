@@ -33,7 +33,7 @@ abstract: |
   Headwater streams comprise nearly 88 % of the western U.S. river network and supply most of the region’s surface water, making them especially sensitive to warming, snowpack loss, and drought. As surface-water inputs decline, groundwater increasingly sustains streamflow, elevating the need to understand long-term trends in base flow and their climatic drivers. We analyzed 75 years of streamflow records (1950–2024) from 115 headwater basins to quantify historical changes, climate controls, and future trajectories of base flow. Using statistical analyses and cluster-specific Long Short-Term Memory models trained on downscaled climate data, we assessed both historical behavior and projections under SSP2-4.5 and SSP5-8.5. Historical results show widespread base-flow declines-most pronounced in early summer—driven by warming, reduced snowmelt, and declining antecedent moisture. Antecedent moisture emerged as the dominant positive driver, while snow and temperature exerted regime-dependent effects. Future projections indicate continued declines of 45–65 % by late century, with earlier seasonal peaks and reduced summer flows. Snowmelt-dominated and arid basins experience the largest relative reductions, whereas mixed-regime systems contribute the greatest volumetric losses. These changes pose significant risks to municipal water supply, ecosystems, and wildfire resilience across the region. Collectively, our results highlight the vulnerability of groundwater-supported streamflow to climate change and demonstrate the value of integrated statistical and machine-learning approaches for regional hydrologic assessment.
 
 plain-language-summary: |
- Headwater catchments supply much of the surface water in the western United States and are highly sensitive to warming and drying. Using 75 years of streamflow records from 115 headwater basins, we examined how base flow has changed over time and how it is likely to change in the future. We combined statistical analyses with cluster-specific machine-learning models trained on climate data to identify key climate controls and project future streamflow conditions. Historical records show widespread declines in base flow, particularly in early summer, driven by warming, reduced snowmelt, and drier antecedent conditions. Antecedent moisture was the strongest positive driver of base flow, while snow and temperature exerted region-specific controls across hydroclimatic regimes. Future projections for SSP2-4.5 and SSP5-8.5 indicate continued declines of 45–65% by late century, with earlier runoff timing and reduced summer flows. Snow-dominated mountain basins and hot, arid systems show the largest relative reductions, while large mixed basins account for the greatest volumetric losses. These results indicate that climate-driven reductions in snowpack and subsurface moisture will substantially diminish groundwater contributions to western headwaters, with implications for water supply, ecosystems, and wildfire resilience.
+ Headwater catchments supply much of the surface water in the western United States and are highly sensitive to warming and drying. Using 75 years of streamflow records from 115 headwater basins, we examined how base flow has changed over time and how it is likely to change in the future. We combined statistical analyses with cluster-specific machine-learning models trained on climate data to identify key climate controls and project future streamflow conditions. Historical records show widespread declines in base flow, particularly in early summer, driven by warming, reduced snowmelt, and drier antecedent conditions. Antecedent moisture was the strongest positive driver of base flow, while snow and temperature exerted region-specific controls across hydroclimatic regimes. Future projections for SSP2-4.5 and SSP5-8.5 indicate continued declines of 45–65% by late century, with earlier runoff timing and reduced summer flows. Snow-dominated mountain basins and low-elevation, rain-dominated systems show the largest relative reductions, while large mixed basins account for the greatest volumetric losses. In addition to declining volumes, base-flow contributions are projected to shift earlier in the year, reducing the groundwater-fed flows that sustain streams through summer dry periods. These results indicate that climate-driven reductions in snowpack and subsurface moisture will substantially diminish groundwater contributions to western headwaters, with implications for water supply, ecosystems, and wildfire resilience.
 
 keywords: [base flow; groundwater–surface water interactions; headwater streams; climate change]
 
@@ -58,10 +58,6 @@ knitr::opts_chunk$set(
   fig.height = 8,
   dpi = 600)
 ```
-
-#### Keywords
-
-base flow; groundwater–surface water interactions; headwater streams; climate change
 
 ## Introduction
 
@@ -144,7 +140,7 @@ To reduce sensitivity to initialization, five models per cluster were trained us
 Model training and hyperparameter selection were conducted separately for each hydroclimatic cluster. We tested a range of LSTM configurations varying the number of hidden units, dropout rates, learning rates, and batch sizes. The final hyperparameters were chosen based on minimizing cross-validated mean absolute error (MAE) during the 2006–2013 period (Table S1). Each model used a 24-month input sequence of climate predictors (precipitation, temperature, antecedent moisture indices, snow fraction, and seasonal harmonics) along with static basin characteristics (elevation, relief, drainage area, latitude, longitude). Inputs were standardized using the mean and standard deviation from the training period (1980–2005).
 
 | **Data Type** | **Predictor** | **Description** |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Temperature** | `t2` | Mean monthly near-surface (2 m) air temperature (°C) |
 |  | `t2max` | Monthly maximum temperature (°C) |
 |  | `t2min` | Monthly minimum temperature (°C) |
@@ -179,7 +175,7 @@ For model evaluation, we validated each cluster-specific LSTM model against clim
 The k-means clustering identified four distinct hydroclimatic groups among the 115 study basins, reflecting differences in elevation, relief, basin size, climate regime, and base-flow response characteristics. These clusters capture gradients in snow influence, seasonal precipitation patterns, and base-flow variability across the western United States. Two clusters (1 and 3) are primarily high-elevation, snow-influenced headwaters but differ in their sensitivity to temperature and snowpack persistence. Cluster 2 contains the largest, mixed-regime basins with relatively stable base flow and Cluster 4 represents low-elevation, rain dominated basins with the lowest base flow and highest interannual variability. Descriptive statistics for each cluster, including key climate, physiographic, and base-flow metrics, are provided in @tbl-cluster-summary, and the spatial distribution of clusters across the study area is shown in @fig-cluster-map.
 
 | Cluster | n | Area (km²) | Elev. Mean (m) | Relief (m) | Prec. Mean (mm) | Temp. Mean (°C) | Monthly Base Flow Mean (cfs) | Base Flow CV |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | 1 | 10 | 1193.3 | 2106 | 1930 | 107.48 | 5.51 | 4765 | 1.37 |
 | 2 | 17 | 4452.2 | 1266 | 2825 | 200.78 | 5.74 | 51840 | 0.74 |
 | 3 | 50 | 1124.8 | 2330 | 1772 | 85.69 | 3.97 | 4357 | 1.30 |
